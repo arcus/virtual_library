@@ -1,6 +1,7 @@
 # CHOP Virtual Library
 
 This is a repository of courses originally written for the [DART program](https://arcus.github.io/education_modules/), lightly adapted here for use within CHOP's WorkDay Learning LMS. 
+For more information about the materials and the DART project (including how you can contribute!) see [the DART modules repository](https://github.com/arcus/education_modules). 
 
 ## How to export a course for use in WorkDay Learning
 
@@ -8,13 +9,14 @@ To upload a course to WDL, you will need the [LiaScript Exporter](https://github
 
 With testing, we've found that this approach has worked well: 
 
-1. First, make sure you have a current version of nodejs:
+1. First, make sure you have a current version of [nodejs](https://formulae.brew.sh/formula/node), using *one* of the following commands:
 
 ```
 brew install node
+brew upgrade node
 ```
 
-2. Then install the liascript exporter:
+2. Then install the [LiaScript Exporter](https://github.com/LiaScript/LiaScript-Exporter):
 
 ```
 sudo npm install -g --verbose @liascript/exporter
