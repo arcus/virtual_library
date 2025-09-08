@@ -34,5 +34,22 @@ You can then upload this file to the WDL shared drive and use it to [create a di
 Each module also has an overview file (e.g. `sql_basics_overview.md`), which includes just the module overview content, including description, learning objectives etc. 
 When you create a course in WDL, render this overview file (you can use the [lia preview in VS Code](https://liascript.github.io/vscode/) or the [liascript live editor](https://liascript.github.io/LiveEditor/)) and copy-paste the overview in as a the course description in WDL. 
 
+## How to adapt a DART module for addition here
+
+1. Copy the module subdirectory from education_modules and paste it in this repo.
+2. Open the module file within the subdirectory (e.g. `sql_basics.md`) and change the import statement(s) in the metadata to point to this repo rather than education_modules.
+3. Make a copy of the module file (e.g. `sql_basics.md`) and name it with `_overview`, like `sql_basics_overview.md`. You should now have two markdown files in your module subdirectory.
+4. In the module file (e.g. `sql_basics.md`), remove most of the metadata. Keep only the following fields: 
+    * title
+    * comment
+    * language
+    * mode
+    * the import statement(s)
+5. In the overview file, (e.g. `sql_basics_overview.md`), replace all the module content (after the metadata section) with just `@overview`.
+6. Preview **both** the overview and the module files. Look closely for anything that should be adjusted for publication within WDL (note that for nontrivial updates it may make sense to record them as an issue in the repo to track work). This may include the following: 
+    * Links to other modules (these should be replaced with WDL links)
+    * Instructions to open external websites for practice (e.g. regexone, positcloud). We should review these processes. 
+    * Content that was written for a non-CHOP audience and should now be revised to more closely hew to CHOP practice and standards, especially reference to tools or techniques that will be unavailable for most CHOP users or are against CHOP policy. 
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
