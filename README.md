@@ -31,6 +31,8 @@ liaex -i sql_basics/sql_basics.md --format scorm2004 --scorm-embed --output wdl_
 This will produce a file called `wdl_sqlbasics.zip` in the `wdl_uploads` subdirectory.
 You can then upload this file to the WDL shared drive and use it to [create a digital course](https://chop365.sharepoint.com/:b:/r/sites/Workday/Shared%20Documents/Learning%20Admin/Create%20a%20Digital%20Course.pdf?csf=1&web=1&e=CAdW6U). 
 
+Each module also has an overview file (e.g. `sql_basics_overview.md`), which includes just the module overview content, including description, learning objectives etc. 
+When you create a course in WDL, render this overview file (you can use the [lia preview in VS Code](https://liascript.github.io/vscode/) or the [liascript live editor](https://liascript.github.io/LiveEditor/)) and copy-paste the overview in as a the course description in WDL. 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
