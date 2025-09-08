@@ -53,8 +53,8 @@ Previous versions:
 - [1.0.2](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/a4ea7a7f1f9264dabe952b68941fc9f0f656c9fc/sql_basics/sql_basics.md#1): Initial version.
 @end
 
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros_sql.md
+import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros_sql.md
 -->
 
 # SQL Basics
