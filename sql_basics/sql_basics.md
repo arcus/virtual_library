@@ -8,9 +8,6 @@ import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_tem
 import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros_sql.md
 -->
 
-# SQL Basics
-@overview
-
 ## SQL: A Brief Refresher
 
 **SQL** (**S**tructured **Q**uery **L**anguage) is a language that for more than four decades has been used to interact with **relational databases**.  You can pronounce it as "sequel" or just say the letters S-Q-L.
@@ -29,6 +26,7 @@ SQL is great at working with rectangular data, data that is stored in tables wit
 If you want to review SQL at a high level, consider our [Demystifying SQL](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/demystifying_sql/demystifying_sql.md#1) module.
 
 ## Lesson Preparation
+
 @lesson_prep_sql
 
 ## SQL Implementations
@@ -334,7 +332,6 @@ SELECT ...
 @AlaSQL.eval("#dataTable9a")
 <table id="dataTable9a" border="1"></table>
 
-
 How many rows do you have in your results? 
 
 [[9]]
@@ -376,8 +373,6 @@ FROM alasql.patients;
 @AlaSQL.eval("#dataTable9b")
 <table id="dataTable9b" border="1"></table>
 
-
-
 </div>
 
 **************
@@ -411,7 +406,6 @@ SELECT
   ,patients.ethnicity --patient ethnicity {'hispanic', 'nonhispanic'}
   ,patients.state     --full name of patients state of residence.
 FROM alasql.patients;
-
 
 /*
     Aren't Comments Great!
@@ -479,7 +473,6 @@ Ready to try your luck at a complex WHERE statement?
 
 Get every field from `patients` for all male patients who were born on or after January 1, 2001.  Not sure about the field name that holds sex, or whether male is coded "Male", "male", "M", or some other way?  Look at the results of other queries to get this information!
 
-
 ```sql
 SELECT
 FROM
@@ -490,11 +483,9 @@ WHERE
 
 <table id="dataTable11c" border="1"></table>
 
-
 <div style = "display:none;">
 @AlaSQL.buildTable_patients
 </div>
-
 
 <details>
 <summary style = "margin-bottom: 1rem;">*If you have given it a good try and are stuck... click here to show/hide an answer!*</summary>
@@ -510,7 +501,6 @@ WHERE
 ```
 
 </details>
-
 
 ### Dealing with Null Values
 
@@ -687,8 +677,6 @@ While you **could** omit `alasql`, it certainly isn't hurting things, and it's o
 
 **************
 
-
-
 ### ORDER BY Statement
 
 Another useful piece of SQL syntax for exploring datasets is the `ORDER BY` statement, which (as its name suggests) is used to order your result set by a given set of one or more columns.
@@ -767,7 +755,6 @@ LIMIT 3;
 @AlaSQL.buildTable_patients
 
 </div>
-
 
 ### Aliasing with AS
 
@@ -909,6 +896,3 @@ You also got to practice hands on, which probably meant you got to see some erro
 * Enjoy learning with real-life, consequential examples?  You might enjoy [Select Star SQL](https://selectstarsql.com/), a free interactive book that allows you to run queries against real-world death row data.
 
 * Prefer a game?  The fun and engaging [SQL Murder Mystery](https://mystery.knightlab.com/) or [Lost at SQL](https://lost-at-sql.therobinlord.com/) might help you hone your skills.
-
-## Feedback
-@feedback

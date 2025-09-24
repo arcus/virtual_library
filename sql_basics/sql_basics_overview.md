@@ -1,6 +1,7 @@
 <!--
-module_id: sql_basics
-author: Peter Camacho; Joy Payton
+dart_module_id: sql_basics
+dart_author: Peter Camacho and Joy Payton
+dart_title: SQL Basics
 email: camachop@chop.edu; paytonk@chop.edu
 version: 1.3.2
 current_version_description: Add three new additional resources; make liascript link(s) point to first page
@@ -57,4 +58,8 @@ import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_tem
 import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros_sql.md
 -->
 
+# SQL Basics
+
 @overview
+
+@dart_citation
