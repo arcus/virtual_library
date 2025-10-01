@@ -51,5 +51,17 @@ When you create a course in WDL, render this overview file (you can use the [lia
     * Instructions to open external websites for practice (e.g. regexone, positcloud). We should review these processes. 
     * Content that was written for a non-CHOP audience and should now be revised to more closely hew to CHOP practice and standards, especially reference to tools or techniques that will be unavailable for most CHOP users or are against CHOP policy. 
 
+## Guidelines for creating a new course
+
+All Virtual Library courses should have a similar structure and aesthetic, to make them recognizable and reduce learners' cognitive load when completing multiple courses. 
+Ensure any new course meets the following requirements: 
+
+- Each course must include the Virtual Library logo as its image in WDL
+- Use the following tag(s) in WDL: [WHAT TAGS??]
+- There must be explicitly stated learning objectives in the description/overview
+- Course content may not drift from its learning objectives (don't include substantial content not in service of the stated learning objectives)
+- Use clear, informative headings (e.g. "Joining on multiple fields" is better than something like "Now it gets more complicated")
+- Every course should be written in markdown and parsed via liascript, according to the instructions here. Make use of the macros in this repository to reuse standard language (e.g. for the overview) across multiple modules.
+
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
