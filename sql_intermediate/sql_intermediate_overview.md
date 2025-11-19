@@ -1,6 +1,6 @@
 <!--
 dart_module_id: sql_intermediate
-dart_author:   Peter Camacho; Joy Payton
+dart_author:   Peter Camacho and Joy Payton
 dart_title: SQL, Intermediate Level
 email:    camachop@chop.edu
 version: 1.4.2
@@ -23,8 +23,6 @@ Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this
 @end
 
 @learning_objectives  
-
-
 
 - Create new data classifications using `CASE` statements
 - Find text that matches a given pattern using `LIKE` statements

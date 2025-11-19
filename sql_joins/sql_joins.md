@@ -2,7 +2,18 @@
 language: en
 mode: Textbook
 title: SQL Joins
-comment: Learn about SQL joins: what they accomplish, and how to write them.
+dart_module_id: sql_joins
+dart_author: Joy Payton
+dart_title: SQL Joins
+comment: Usually, data in a SQL database is organized into multiple interrelated tables.  This means you will often have to bring data together from two or more tables into a single dataset to answer your research questions.  This "join" action is accomplished using `JOIN` commands.  This module teaches types of joins, join criteria, and how to write `JOIN` code. Learners should have experience writing SQL code on single tables.  If you have successfully used a "SELECT... FROM... WHERE" SQL statement on a single table, and have at least seen "GROUP BY" commands in action, even if you would need help writing the GROUP BY code, you have enough code ability.  We also highly recommend that you understand the concepts of one-to-many data relationships and database normalization to get the most out of this module. 
+
+@learning_objectives  
+
+- Understand the parts of a JOIN
+- Describe the "shapes" of SQL JOINs: inner, left, right, and full
+- Explain what "join criteria" are
+
+@end
 
 
 import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros.md
@@ -1180,3 +1191,6 @@ When there's no matching data from the one of the tables to join to the data you
 
 * Prefer a game?  The fun and engaging [SQL Murder Mystery](https://mystery.knightlab.com/) or [Lost at SQL](https://lost-at-sql.therobinlord.com/) might help you hone your skills.
 
+## Acknowledgements 
+
+@dart_citation 

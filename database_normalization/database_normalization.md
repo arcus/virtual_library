@@ -1,11 +1,25 @@
 <!--
 title: Database Normalization
-comment: Learn about the concept of normalization and why it's important for organizing complicated data in relational databases.
+dart_module_id: database_normalization
+dart_author:   Joy Payton
+dart_title: Database Normalization
+
+comment: In this module, you'll learn about the concept of normalization and why it's important for organizing complicated data in relational databases. Usually, data in a relational database like SQL is organized into multiple interrelated tables with as little data repetition as possible. This concept can be useful to apply in other areas as well, such as organizing data in .csvs or in data frames in R or Python.  This module teaches underlying data considerations and explains how data can be efficiently organized by introducing the concepts of one-to-many data relationships and normalization. Learners should have experience working with data in tables.  This could included working with .csv files, SQL databases, R data frames, REDCap instruments, or other ways that data can be collected in tables. 
+
+@learning_objectives  
+
+- Explain the significance of "one to many" data relationships and how these relationships affect data organization
+- Describe how a normalized database is typically organized
+- Explain how data can be linked between tables and define "primary keys" and "foreign keys"
+
+@end 
+
 language: en
 mode: Textbook
 
 import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros.md
 -->
+
 
 ## Multiple Tables
 
@@ -344,3 +358,6 @@ A foreign key is an identifier that originates in another table.  It certainly s
 * A brief, very readable [article that talks about one-to-many relationships and several kinds of normalization](https://www.lifewire.com/one-to-many-relationships-1019756) (including our normalization in this module, which is third normal form, or 3NF).
 * On the same site, you can read in [a bit more technical detail about the various levels of normalization](https://www.lifewire.com/database-normalization-basics-1019735).
 
+## Acknowledgements 
+
+@dart_citation 
