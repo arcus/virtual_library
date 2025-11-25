@@ -1,6 +1,19 @@
 <!--
 title: Demystifying SQL
-comment:  SQL is a relational database solution that has been around for decades.  Learn more about this technology at a high level, without having to write code.
+dart_module_id: demystifying_sql
+dart_author:   Peter Camacho and Joy Payton
+dart_title: Demystifying SQL
+comment:  SQL is a relational database solution that has been around for decades. Do you have colleagues who use SQL or refer to "databases" or "the data warehouse" and you're not sure what it all means?  This module will give you some very high level explanations to help you understand what SQL is and some basic concepts for working with it.  There is no code or hands-on application in this module, so it's appropriate for people who have zero experience and want an overview of SQL. Experience working with rectangular data (data in rows and columns) will be helpful.  For example, experience working in Excel, Google Sheets, or other software that helps organize data into rows and columns is sufficient expertise to take this module.
+
+@learning_objectives  
+
+- Define the acronym "SQL"
+- Explain the basic organization of data in relational databases
+- Explain what "relational" means in the phrase "relational database"
+- Give an example of what kinds of tasks SQL is ideal for
+
+@end
+
 language: en
 mode: Textbook
 
@@ -295,3 +308,7 @@ Finally, you learned about the structure of relational databases: data stored in
 * [What is SQL?](https://education.arcus.chop.edu/sql-intro/) is a brief introduction to SQL similar to the material in this module.
 
 * If you are interested in the history of technology, [Early History of SQL](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6359709) is a comprehensive look into how SQL has evolved.  It's very jargon-dense!
+
+## Acknowledgements 
+
+@dart_citation 

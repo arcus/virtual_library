@@ -1,13 +1,25 @@
 <!--
+dart_module_id: sql_intermediate
+dart_author:   Peter Camacho and Joy Payton
+dart_title: SQL, Intermediate Level
 title: SQL, Intermediate Level
-comment:  Learn how to do intermediate SQL queries on single tables, by using code, hands-on.
+comment:  Do you want to learn intermediate Structured Query Language (SQL) for more precise and complex data querying on single tables?  This module will give you hands on experience with single-table queries using keywords including CASE, LIKE, REGEXP_LIKE, GROUP BY, HAVING, and WITH, along with a number of aggregate functions like COUNT and AVG.  This module is appropriate for people who are comfortable writing basic SQL queries and are ready to practice more advanced skills. Some experience writing basic SQL code (SELECT, FROM, WHERE) is expected in this module.
+
+@learning_objectives  
+
+- Create new data classifications using `CASE` statements
+- Find text that matches a given pattern using `LIKE` statements
+- Use `GROUP BY` and `HAVING` statements along with aggregate functions to understand group characteristics
+- Use `WITH` to create sub queries
+
+@end
+
 language: en
 mode: Textbook
 
 import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros.md
 import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros_sql.md
 -->
-
 
 ## SQL: A Brief Refresher
 
@@ -680,3 +692,6 @@ FROM generations;
 
 * Prefer a game?  The fun and engaging [SQL Murder Mystery](https://mystery.knightlab.com/) or [Lost at SQL](https://lost-at-sql.therobinlord.com/) might help you hone your skills.
 
+## Acknowledgements 
+
+@dart_citation 

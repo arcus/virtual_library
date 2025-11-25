@@ -1,6 +1,20 @@
 <!--
 title: SQL Basics
-comment:  Structured Query Language, or SQL, is a relational database solution that has been around for decades.  Learn how to do basic SQL queries on single tables, by using code, hands-on.
+dart_module_id: sql_basics
+dart_author: Peter Camacho and Joy Payton
+dart_title: SQL Basics
+comment:  Do you want to learn basic Structured Query Language (SQL) either to understand concepts or prepare for access to a relational database?  This module will give you hands on experience with simple queries using keywords including SELECT, WHERE, FROM, DISTINCT, and AS.  We'll also briefly cover working with empty (NULL) values using IS NULL and IS NOT NULL.  This module is appropriate for people who have little or no experience in SQL and are ready to practice with real queries. Experience working with rectangular data (data in rows and columns) is required, as is some exposure to the idea of SQL and its use of tables with rows and columns.  No experience writing SQL code is expected or required for this module.
+
+@learning_objectives  
+
+- Use SELECT, FROM, and WHERE to do a basic query on a SQL table
+- Use IS NULL and IS NOT NULL operators to work with empty values
+- Explain the use of DISTINCT and how it can be useful
+- Use AS and ORDER BY to change how query results appear
+- Explain why the LIMIT keyword can be useful
+
+@end
+
 language: en
 mode: Textbook
 
@@ -896,3 +910,7 @@ You also got to practice hands on, which probably meant you got to see some erro
 * Enjoy learning with real-life, consequential examples?  You might enjoy [Select Star SQL](https://selectstarsql.com/), a free interactive book that allows you to run queries against real-world death row data.
 
 * Prefer a game?  The fun and engaging [SQL Murder Mystery](https://mystery.knightlab.com/) or [Lost at SQL](https://lost-at-sql.therobinlord.com/) might help you hone your skills.
+
+## Acknowledgements 
+
+@dart_citation 
