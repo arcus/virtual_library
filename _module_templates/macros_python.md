@@ -106,7 +106,7 @@ For the most part, the commands we would use to run Python with pyodide are exac
 
 So, we do something a little sneaky with the code here -- we run a set of pyodide-specific commands to read in the data without displaying that code on the page, and then we include a non-executable code box showing the code you would actually want to run to do this on your own computer. 
 
-If you're curious about pyodide, you can [view our modules, including this one, in their raw format](https://github.com/arcus/education_modules) to see the extra code. 
+If you're curious about pyodide, you can [view our modules, including this one, in their raw format](https://github.com/arcus/virtual_library) to see the extra code. 
 But there's no reason to bother with this unless you're curious! 
 That's why we hid that extra code in the first place. 
 
@@ -218,7 +218,7 @@ sagecell.makeSagecell({inputLocation: 'div.r_run',
 
 script: https://sagecell.sagemath.org/static/embedded_sagecell.js
 
-import: https://raw.githubusercontent.com/arcus/education_modules/main/_module_templates/macros.md
+import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros.md
 -->
 
 # Python Module Macros
