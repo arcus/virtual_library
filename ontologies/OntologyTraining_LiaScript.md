@@ -1,5 +1,6 @@
 ## Ontologies
 
+![Side-by-side comparison of taxonomy and ontology structures: taxonomy shown as a strict hierarchical tree, ontology shown as a network of concepts connected through multiple relationship types.](media/Ontologies_OntovsTax.png)
 Ontologies are a foundational component of the annotation process. While taxonomies and ontologies are both used to organize knowledge, they differ significantly in how they represent information and relationships between concepts. Understanding these differences is important when selecting or creating terminology for labels as part of the development of annotation guidelines. 
 In this module, you will learn: 
 - How ontologies extend beyond simple hierarchical classification,
@@ -49,7 +50,7 @@ An ontological approach captures connections naturally as most knowledge and con
 As determining key terms for labels is one of the first steps in creating Annotation Guidelines, it is important to know if you will be utilizing an existing ontology or creating your own for the project. Below is information on three existing ontologies that you can utilize as well as information on creating your own ontology if the existing ones do not meet your needs. HPO and SNOMED are already available in the BRAT annotation tool within Arcus labs. For a larger listing of existing Biomedical Ontologies, [see this resource](https://guides.lib.umich.edu/ontology/ontologies#:~:text=ICD%20-%20International%20Classification%20of%20Diseases,Nomenclature%20of%20Medicine-Clinical%20Terms) from the University of Michigan.
 
 ## Existing Ontologies
-
+![Three cards detailing existing ontologies used in biomedical research: HPO, SNOMED and UMLS. EAch has its own card with matching icon](media/Ontologies_Exisisting.png)
 Detailed here are three existing ontologies that you could use as the ontology for the key terms for your labels in your annotation project: Human Phenotype Ontology (HPO), SNOMED CT, and the Unified Medical Language System (UMLS). 
 
 ### HPO
@@ -148,6 +149,8 @@ _Note: In ontologies, properties and classes form a hierarchy and inherit the pr
 For more detailed information on the steps outlined, view [Ontology Development 101: A Guide to Creating Your First Ontology](https://protege.stanford.edu/publications/ontology_development/ontology101.pdf).
 
 ## Managing an Ontology 
+
+![Three circles depicting the three steps in managing an ontology: Adding the term, editing is, and deprecating it when needed. Each has corresponding icon.](media/Ontologies_Managing.png)
 
 Managing an ontology is an important part of the process whether you are utilizing an existing ontology or creating your own. Detailed here are widely used tools, including Protégé, PoolParty, and BRAT, to help you do this, in addition to noting the importance of adding, editing, and deprecating Terms.
 
