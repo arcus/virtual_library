@@ -1,6 +1,7 @@
 ## Ontologies
 
 ![Side-by-side comparison of taxonomy and ontology structures: taxonomy shown as a strict hierarchical tree, ontology shown as a network of concepts connected through multiple relationship types.](media/Ontologies_OntovsTax.png)
+
 Ontologies are a foundational component of the annotation process. While taxonomies and ontologies are both used to organize knowledge, they differ significantly in how they represent information and relationships between concepts. Understanding these differences is important when selecting or creating terminology for labels as part of the development of annotation guidelines. 
 In this module, you will learn: 
 - How ontologies extend beyond simple hierarchical classification,
@@ -51,6 +52,7 @@ As determining key terms for labels is one of the first steps in creating Annota
 
 ## Existing Ontologies
 ![Three cards detailing existing ontologies used in biomedical research: HPO, SNOMED and UMLS. EAch has its own card with matching icon](media/Ontologies_Exisisting.png)
+
 Detailed here are three existing ontologies that you could use as the ontology for the key terms for your labels in your annotation project: Human Phenotype Ontology (HPO), SNOMED CT, and the Unified Medical Language System (UMLS). 
 
 ### HPO
