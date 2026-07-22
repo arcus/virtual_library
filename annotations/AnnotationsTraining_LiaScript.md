@@ -1,9 +1,12 @@
 <!--
 title: Checklist for Creating a Gold-Standard Annotated Dataset for your Research Project
 
-comment:  Labeling, the process for adding annotations to data, helps us understand data in a more meaningful way by allowing us to better analyze and use it for our purposes. Consistent and correct data annotation preserves information integrity across different datasets and makes them interoperable with other AI systems, reducing errors that lead to misclassification or misinterpretation of data by AI algorithms.  
+@comment
+Labeling, the process for adding annotations to data, helps us understand data in a more meaningful way by allowing us to better analyze and use it for our purposes. Consistent and correct data annotation preserves information integrity across different datasets and makes them interoperable with other AI systems, reducing errors that lead to misclassification or misinterpretation of data by AI algorithms.  
 
-This training is designed to arm researchers and their study teams with industry identified best practices on achieving high-quality, gold-standard annotated data for your desired purpose, whether that be for model training, model validation, publication, secondary analysis, or archival reuse. It is encouraged to be taken prior to beginning a project that requires this knowledge but can be informational at any stage of the process.  
+This training is designed to arm researchers and their study teams with industry identified best practices on achieving high-quality, gold-standard annotated data for your desired purpose, whether that be for model training, model validation, publication, secondary analysis, or archival reuse. It is encouraged to be taken prior to beginning a project that requires this knowledge but can be informational at any stage of the process.
+
+@end
 
 
 @learning_objectives  
@@ -19,6 +22,7 @@ At the end of this module, you will emerge with the knowledge of:
 language: en
 mode: Textbook
 
+link:  https://cdn.jsdelivr.net/gh/arcus/virtual_library@main/assets/styles.css
 import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros.md
 -->
 
@@ -97,7 +101,7 @@ Note that developing these guidelines is not a one-time task. It is an iterative
 
 As the standards evolve, be sure to conduct consensus checks, where multiple annotators independently label the same data, and discrepancies are resolved collaboratively or through a supervisor intervention / tiebreaker. It is imperative to track inter-annotator agreement (see the [Inter-Annotator Agreement](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/virtual_library/refs/heads/annotations-ontologies/annotations/AnnotationsTraining_LiaScript.md#13) and [Common Methods of Assessment](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/virtual_library/refs/heads/annotations-ontologies/annotations/AnnotationsTraining_LiaScript.md#14) sections under Best Practices: During Annotation for more information) and annotation error rates to monitor quality. These activities strengthen your standards and support the creation of gold-standard annotations.
 
-General Overview of Annotation workflow (three phases):
+**General Overview of Annotation workflow (three phases):**
 
 1. Training: The training phase provides an initial look at sample data that will appear in the project. This stage will iterate on the ontology and annotation guidelines, so they accurately reflect the project scope and the data available. It will provide the annotators with examples, edge cases and practice tasks, and offer feedback to ensure consistent interpretation of labels
 2. Validation: During the validation phrase, there is a focus on achieving consistent annotations across annotators. Having multiple annotators label the same items, calculate inter-annotator agreement (e.g. Cohen's Kappa, Krippendorff's alpha, etc.) and publish these scores. Iterate on guidelines and retrain annotators until agreement meets the predefined threshold. The disagreements can be resolved either through consensus meets or supervisor adjudication
@@ -217,7 +221,13 @@ There are several common methods to assess the reliability of each annotation, i
 
 When considering which metric to use, keep in mind that both the Cohen and Fleiss coefficients are subject to the kappa paradox. This is a complex phenomenon where, under certain conditions, the statistic assumes a low value (indicating less agreement) even when there is actually a high inter-annotator agreement.
 
->In conventional surveys, when the task is to answer a set of (multi-choice) questions, the raters choose among a set of pre-defined choices, and their interrater agreement can be measured using Kappa metrics. For example, Cohen's Kappa can be used for exactly two raters and Fleiss' Kappa for three or more raters or when different sets of raters evaluate different items. However, an annotation project may be more complex than answering multi-choice questions. For example, in a phenotyping task where the rater is tasked to find the phrase associated with a specific symptom (e.g., Nausea) and then assign a severity level to it (e.g., Grade 3), each time, the rater is answering two questions (instead of one in conventional surveys). First, the rater is identifying the span/phrase in the text with marking begin index to end index, and then assigning a tag (here, the severity level) from the defined ontology. While you can still use Kappa metrics to measure the interrater agreement, note that you first need to map the raters' spans, and that by itself can showcase variability or otherwise disagreement among them. As a result, the standard Kappa value interpretation may be unrealistic to achieve.
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Important note</b><br>
+
+In conventional surveys, when the task is to answer a set of (multi-choice) questions, the raters choose among a set of pre-defined choices, and their interrater agreement can be measured using Kappa metrics. For example, Cohen's Kappa can be used for exactly two raters and Fleiss' Kappa for three or more raters or when different sets of raters evaluate different items. However, an annotation project may be more complex than answering multi-choice questions. For example, in a phenotyping task where the rater is tasked to find the phrase associated with a specific symptom (e.g., Nausea) and then assign a severity level to it (e.g., Grade 3), each time, the rater is answering two questions (instead of one in conventional surveys). First, the rater is identifying the span/phrase in the text with marking begin index to end index, and then assigning a tag (here, the severity level) from the defined ontology. While you can still use Kappa metrics to measure the interrater agreement, note that you first need to map the raters' spans, and that by itself can showcase variability or otherwise disagreement among them. As a result, the standard Kappa value interpretation may be unrealistic to achieve.
+
+</div>
+
 
 ### During Annotation Checklist
 
