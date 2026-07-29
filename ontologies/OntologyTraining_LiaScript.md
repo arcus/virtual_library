@@ -119,7 +119,9 @@ There is no one-way or comprehensive methodology that you can always use that co
     - By using properties, you are able to describe the internal structure of your classes
     - Example: 
 
-![Classes and their properties/slots](media/Ontology_ClassProperties.png)
+
+<img src="media/Ontology_ClassProperties.png" style="width: 40%; margin-right: 4%; display: inline-block; vertical-align: top;" alt="Classes and their properties/slots." />
+
 
 6. Define the facts of the properties (Properties can also be referred to as slots)
 
