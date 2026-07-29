@@ -61,13 +61,13 @@ The best practices outlined here should direct you towards achieving high-qualit
 
 ## Best Practices: Pre-Annotation
 
-![Teal graphic showing the three different phases of annotating data; pre-annotation, during annotation and post-annotation. This graphic has a heavier shade on pre-annotation stating 'You are here'](media/Annotation_Pre.png)
+![Teal graphic showing the three different phases of annotating data; pre-annotation, during annotation and post-annotation. This graphic has a heavier shade on pre-annotation stating 'You are here'.](media/Annotation_Pre.png)
 
 Successful gold-standard annotation projects begin before labels are applied. The pre-annotation phase lays the foundation for high-quality, reliable annotated datasets by ensuring that data is representative, privacy requirements are addressed, annotation standards are clearly defined, and annotators are properly trained. Careful preparation helps reduce bias, improve consistency, and ensure that annotated data can effectively support downstream research, analytics, or machine learning objectives. This section outlines key pre-annotation best practices, including data selection and preparation, HIPAA and IRB considerations, development of annotation guidelines and ontologies, and annotator recruitment and training that support the creation of accurate, reproducible, gold-standard datasets.
 
 ### Diverse, Representative Data
 
-![Teal graphic showing the three rules for good data in machine learning annotation; representative sourcing, adequate sample size, and data cleaning and prep. Each rule has a box with a representative graphic](media/Annotation_GoodData.png)
+![Teal graphic showing the three rules for good data in machine learning annotation; representative sourcing, adequate sample size, and data cleaning and prep. Each rule has a box with a representative graphic.](media/Annotation_GoodData.png)
 
 Make sure to choose the right data that is both relevant and representative of real-world scenarios. Diversity helps to minimize dataset bias by encompassing a variety of use cases, scenarios, and edge cases, but also allows for the data to align with project objectives. If the goal is to create a machine learning model, consider what specific tasks it needs to perform. This will help determine the kind of data it needs to learn from.
 
@@ -146,9 +146,49 @@ As annotators are human, their lived experiences and biases shape how they label
 - [ ] Annotators with relevant domain expertise or annotation experience recruited and trained
 - [ ] Test annotations completed and reviewed
 
+### Knowledge Check: Pre-Annotation 
+
+1. What is the primary value of creating a gold-standard annotated dataset?  
+
+[( )] A. Increasing dataset size 
+[(X)] B. Producing high-quality, expert‑validated labels to enable reliable model training and evaluation 
+[( )] C. Ensuring annotations are proprietary and non‑shareable 
+[( )] D. Automating all data cleaning steps 
+
+
+---
+
+2. Which of the following is **not** a quality of high-quality, gold-standard labeled data?
+[( )] A. Performant
+[( )] B. Consistent
+[(X)] C. Simple
+[( )] D. Unbiased
+
+---
+
+3. True or false: High-quality annotations can improve model performance, interoperability, and reproducibility.
+- [(x)] True
+- [( )] False
+
+---
+
+4. Which pre-annotation activity most directly reduces privacy risk before annotation begins?
+
+[( )] A. Choosing a larger sample size  
+[(X)] B. Deidentifying PHI or applying access controls and IRB review  
+[( )] C. Training annotators on the annotation tool  
+[( )] D. Creating detailed annotation guidelines  
+
+---
+
+5. True or false: It is best practice to pilot annotation guidelines on as large a sample as possible.
+
+[( )] True  
+[(X)] False 
+
 ## Best Practices: During Annotation
 
-![Teal graphic showing the three different phases of annotating data; pre-annotation, during annotation and post-annotation. This graphic has a heavier shade on during annotation stating 'You are here'](media/Annotation_During.png)
+![Teal graphic showing the three different phases of annotating data; pre-annotation, during annotation and post-annotation. This graphic has a heavier shade on during annotation stating 'You are here'.](media/Annotation_During.png)
 
 The annotation phase is where guidelines are put into practice and data is transformed into having high-quality, reliable labels. Success during this stage depends on well-trained annotators, clear communication channels, ongoing quality assurance, and continuous monitoring of annotation consistency. Annotation is an iterative process that requires regular feedback, guideline refinement, and consensus-building to address ambiguities and improve accuracy. By implementing structured training programs, conducting routine quality checks, tracking inter-annotator agreement, and documenting updates to annotation standards, teams can maintain consistency across annotators and produce reproducible, gold-standard datasets.
 
@@ -238,6 +278,71 @@ In conventional surveys, when the task is to answer a set of (multi-choice) ques
 - [ ] Inter-annotator agreement chosen and metrics tracked
 - [ ] Regular communication and progress tracking occurs
 
+### Knowledge Check: During Annotation
+
+6. During the validation phase, the primary purpose of having multiple annotators label the same items is to:
+
+[( )] A. Produce the final gold dataset directly  
+[(X)] B. Measure inter-annotator agreement and identify ambiguous guidelines  
+[( )] C. Increase annotator throughput by duplicating work  
+[( )] D. Train annotators to use the annotation software  
+
+---
+
+7. In which phase of the annotation workflow is there a focus on achieving consistent annotations across annotators?
+
+[( )] A.Assessment  
+[( )] B. Training  
+[(X)] C. Validation  
+[( )] D. Gold-standard annotation  
+
+---
+
+8. Which strategies help reduce annotator bias and improve annotation quality? (Select all that apply.)
+
+[[X]] A. Recruiting annotators with diverse backgrounds  
+[[X]] B. Providing ongoing training, examples, and feedback channels  
+[[ ]] C. Allowing annotators to develop private undocumented rules  
+[[X]] D. Using subject-matter experts for complex clinical judgments  
+
+---
+
+9. True or false: For highly technical clinical annotation tasks, untrained crowd annotators are as suitable as domain experts.
+
+[( )] True  
+[(X)] False  
+
+---
+
+10. Which QA technique is most useful for identifying systematic annotation errors concentrated in ambiguous cases?
+
+[( )] A. Random spot audits only  
+[( )] B. Increasing the number of annotators per item to 10  
+[( )] C. Deleting ambiguous items from the dataset  
+[(X)] D. Targeted audits focused on items with high annotator disagreement  
+
+---
+
+11. Embedding items with predetermined correct labels into annotation batches to monitor annotator performance would be an example of an ______ task.
+
+[[audit]]
+
+---
+
+12. Which IAA metrics are appropriate choices depending on task and number of annotators? (Select all that apply.)
+
+[[X]] A. Cohen’s kappa  
+[[X]] B. Fleiss’ kappa  
+[[X]] C. Krippendorff’s alpha  
+[[ ]] D. Bayesian Information Criterion (BIC)  
+
+---
+
+13. True or false: A very high percent agreement always implies a high kappa score.
+
+[( )] True  
+[(X)] False  
+
 ## Best Practices: Post-Annotation
 
 ![Teal graphic showing the three different phases of annotating data; pre-annotation, during annotation and post-annotation. This graphic has a heavier shade on post-annotation stating 'You are here'](media/Annotation_Post.png)
@@ -325,114 +430,9 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 - [ ] Archival Plan
 - [ ] Sharing Plan
 
-## Knowledge Check 
+## Knowledge Check: Post Annotation
 
-1. What is the primary value of creating a gold-standard annotated dataset?  
-
-[( )] A. Increasing dataset size 
-[(X)] B. Producing high-quality, expert‑validated labels to enable reliable model training and evaluation 
-[( )] C. Ensuring annotations are proprietary and non‑shareable 
-[( )] D. Automating all data cleaning steps 
-
-
----
-
-2. Which of the following is **not** a quality of high-quality, gold-standard labeled data?
-[( )] A. Performant
-[( )] B. Consistent
-[(X)] C. Simple
-[( )] D. Unbiased
-
----
-
-3. True or false: High-quality annotations can improve model performance, interoperability, and reproducibility.
-- [(x)] True
-- [( )] False
-
----
-
-4. Which pre-annotation activity most directly reduces privacy risk before annotation begins?
-
-[( )] A. Choosing a larger sample size  
-[(X)] B. Deidentifying PHI or applying access controls and IRB review  
-[( )] C. Training annotators on the annotation tool  
-[( )] D. Creating detailed annotation guidelines  
-
----
-
-5. True or false: It is best practice to pilot annotation guidelines on as large a sample as possible.
-
-[( )] True  
-[(X)] False  
-
----
-
-6. During the validation phase, the primary purpose of having multiple annotators label the same items is to:
-
-[( )] A. Produce the final gold dataset directly  
-[(X)] B. Measure inter-annotator agreement and identify ambiguous guidelines  
-[( )] C. Increase annotator throughput by duplicating work  
-[( )] D. Train annotators to use the annotation software  
-
----
-
-7. In which phase of the annotation workflow is there a focus on achieving consistent annotations across annotators?
-
-[( )] A.Assessment  
-[( )] B. Training  
-[(X)] C. Validation  
-[( )] D. Gold-standard annotation  
-
----
-
-8. Which strategies help reduce annotator bias and improve annotation quality? (Select all that apply.)
-
-[[X]] A. Recruiting annotators with diverse backgrounds  
-[[X]] B. Providing ongoing training, examples, and feedback channels  
-[[ ]] C. Allowing annotators to develop private undocumented rules  
-[[X]] D. Using subject-matter experts for complex clinical judgments  
-
----
-
-9. True or false: For highly technical clinical annotation tasks, untrained crowd annotators are as suitable as domain experts.
-
-[( )] True  
-[(X)] False  
-
----
-
-10. Which QA technique is most useful for identifying systematic annotation errors concentrated in ambiguous cases?
-
-[( )] A. Random spot audits only  
-[( )] B. Increasing the number of annotators per item to 10  
-[( )] C. Deleting ambiguous items from the dataset  
-[(X)] D. Targeted audits focused on items with high annotator disagreement  
-
----
-
-11. Embedding items with predetermined correct labels into annotation batches to monitor annotator performance would be an example of an ______ task.
-
-[[audit]]
-
----
-
-12. Which IAA metrics are appropriate choices depending on task and number of annotators? (Select all that apply.)
-
-[[X]] A. Cohen’s kappa  
-[[X]] B. Fleiss’ kappa  
-[[X]] C. Krippendorff’s alpha  
-[[ ]] D. Bayesian Information Criterion (BIC)  
-
----
-
-13. True or false: A very high percent agreement always implies a high kappa score.
-
-[( )] True  
-[(X)] False  
-
----
-
-14. Which of the following should be included in the final data package for a gold dataset? (Select the best single answer.)
+ 14. Which of the following should be included in the final data package for a gold dataset? (Select the best single answer.)
 
 [( )] A. Raw data only  
 [(X)] B. Machine-readable annotation files, README/technical docs, ontology exports, and provenance/QA metrics  
@@ -460,7 +460,6 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 
 [(X)] True  
 [( )] False 
-
 
 ## Checklist
 
