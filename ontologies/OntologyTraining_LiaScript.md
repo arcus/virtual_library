@@ -50,6 +50,33 @@ An ontological approach captures connections naturally as most knowledge and con
 
 As determining key terms for labels is one of the first steps in creating Annotation Guidelines, it is important to know if you will be utilizing an existing ontology or creating your own for the project. Below is information on three existing ontologies that you can utilize as well as information on creating your own ontology if the existing ones do not meet your needs. HPO and SNOMED are already available in the BRAT annotation tool within Arcus labs. For a larger listing of existing Biomedical Ontologies, [see this resource](https://guides.lib.umich.edu/ontology/ontologies#:~:text=ICD%20-%20International%20Classification%20of%20Diseases,Nomenclature%20of%20Medicine-Clinical%20Terms) from the University of Michigan.
 
+### Knowledge Check: Ontologies
+
+1. Which statement best distinguishes an ontology from a taxonomy?
+
+[( )] A. A taxonomy can express multiple relationship types, while an ontology cannot  
+[(X)] B. An ontology is a richer formal model that can express multiple relationship types and constraints; a taxonomy is typically a simple hierarchical classification  
+[( )] C. Taxonomies always include inference capabilities and OWL semantics  
+[( )] D. Ontologies are always flat lists of terms  
+
+---
+
+2. True or false: Ontologies improve computability and interoperability by providing formal definitions, relationships, and constraints.
+
+[(X)] True  
+[( )] False  
+
+---
+
+3. You should prefer an ontology over a simple label list when: (Select all that apply.)
+
+[[X]] A. Relationships between concepts (e.g., is-a, part-of) are important to downstream analysis  
+[[X]] B. You need computable definitions to support reasoning or mapping across vocabularies  
+[[ ]] C. The project only requires a short, fixed hierarchical label list with no relationships  
+[[X]] D. Reuse and interoperability with other datasets or EHR systems are goals  
+
+---
+
 ## Existing Ontologies
 ![Three cards detailing existing ontologies used in biomedical research: HPO, SNOMED and UMLS. EAch has its own card with matching icon](media/Ontologies_Exisisting.png)
 
@@ -82,6 +109,24 @@ Descriptions are the human readable terms that are associated with clinical idea
 ### UMLS
 
 The [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) is a collection of files and software developed by the National Library of Medicine that enables interoperability across biomedical computer systems. At its core, is the UMLS Metathesaurus, a large biomedical thesaurus organized by concept, which serves as a bridge connecting over [200 source vocabularies](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/), including SNOMED CT, HPO, ICD-10, RxNORM, etc., by linking synonymous terms to shared concepts. This means a clinician's SNOMED CT code, and a geneticist's HPO term can be recognized as referring to the same underlying concept, allowing seamless traversal across vocabularies. The Metathesaurus preserves each vocabulary's original meanings, concept meanings and relationships while surfacing cross vocabulary connections through a unified concept identifier (CUI) system. The [UMLS Metathesaurus Browser](https://uts.nlm.nih.gov/uts/umls/home) is a web interface for searching and exploring these linked concepts and their relationships interactively.
+
+### Knowledge Check: Existing Ontologies
+
+4. Which resource aggregates many biomedical vocabularies and provides mappings across them via unified concept identifiers?
+
+[( )] A. HPO  
+[( )] B. SNOMED CT  
+[(X)] C. UMLS  
+[( )] D. Protégé  
+
+---
+
+5. True or false: SNOMED CT is primarily designed as a comprehensive clinical terminology for EHR interoperability.
+
+[(X)] True  
+[( )] False  
+
+---
 
 ## Creating an Ontology 
 
@@ -152,6 +197,29 @@ _Note: In ontologies, properties and classes form a hierarchy and inherit the pr
 
 For more detailed information on the steps outlined, view [Ontology Development 101: A Guide to Creating Your First Ontology](https://protege.stanford.edu/publications/ontology_development/ontology101.pdf).
 
+## Knowledge Check: Creating an Ontology 
+
+6. Before building a new ontology, it is recommended to consider reusing or ______ an existing ontology.
+
+[[extending]]
+
+---
+
+7. Which steps are important when creating a practical ontology for annotation projects? (Select all that apply.)
+
+[[X]] A. Define domain and scope  
+[[ ]] B. Omit documentation to keep the ontology compact  
+[[X]] C. Enumerate terms and build class hierarchy  
+[[X]] D. Define properties (domain, range, cardinality) and document semantics  
+
+---
+
+8. When constructing classes and properties, top-down, bottom-up, or ______ approaches are commonly used (one word).
+
+[[combination]]
+
+---
+
 ## Managing an Ontology 
 
 ![Three circles depicting the three steps in managing an ontology: Adding the term, editing is, and deprecating it when needed. Each has corresponding icon.](media/Ontologies_Managing.png)
@@ -170,69 +238,7 @@ Managing ontology terms over time involves three core activities: adding new ter
 
 Within Arcus labs, it is recommended to maintain your ontology terms, relationships, and definitions in GitHub, a web-based platform that uses Git to track changes to files over time, including files edited collaboratively by a team. GitHub is particularly well suited to ontology management because every change is automatically recorded in the repository history, eliminating the need to manually number or rename files to track versions. When making changes, it is helpful to distinguish between major updates (such as significant restructuring of classes or relationships) and minor updates (such as small definition edits) noting these differences in your commit messages. Consistent file naming conventions should be established from the outset within GitHub that is useful, consistent and well documented, [see this resource](https://storage.googleapis.com/arcus-edu-libsci/Arcus%20RDM%20Resources/fileNaming_bestPractices_MIT.pdf) for more information.
 
-## Knowledge Check
-
-1. Which statement best distinguishes an ontology from a taxonomy?
-
-[( )] A. A taxonomy can express multiple relationship types, while an ontology cannot  
-[(X)] B. An ontology is a richer formal model that can express multiple relationship types and constraints; a taxonomy is typically a simple hierarchical classification  
-[( )] C. Taxonomies always include inference capabilities and OWL semantics  
-[( )] D. Ontologies are always flat lists of terms  
-
----
-
-2. True or false: Ontologies improve computability and interoperability by providing formal definitions, relationships, and constraints.
-
-[(X)] True  
-[( )] False  
-
----
-
-3. You should prefer an ontology over a simple label list when: (Select all that apply.)
-
-[[X]] A. Relationships between concepts (e.g., is-a, part-of) are important to downstream analysis  
-[[X]] B. You need computable definitions to support reasoning or mapping across vocabularies  
-[[ ]] C. The project only requires a short, fixed hierarchical label list with no relationships  
-[[X]] D. Reuse and interoperability with other datasets or EHR systems are goals  
-
----
-
-4. Before building a new ontology, it is recommended to consider reusing or ______ an existing ontology.
-
-[[extending]]
-
----
-
-5. Which resource aggregates many biomedical vocabularies and provides mappings across them via unified concept identifiers?
-
-[( )] A. HPO  
-[( )] B. SNOMED CT  
-[(X)] C. UMLS  
-[( )] D. Protégé  
-
----
-
-6. True or false: SNOMED CT is primarily designed as a comprehensive clinical terminology for EHR interoperability.
-
-[(X)] True  
-[( )] False  
-
----
-
-7. Which steps are important when creating a practical ontology for annotation projects? (Select all that apply.)
-
-[[X]] A. Define domain and scope  
-[[ ]] B. Omit documentation to keep the ontology compact  
-[[X]] C. Enumerate terms and build class hierarchy  
-[[X]] D. Define properties (domain, range, cardinality) and document semantics  
-
----
-
-8. When constructing classes and properties, top-down, bottom-up, or ______ approaches are commonly used (one word).
-
-[[hybrid]]
-
----
+## Knowledge Check: Managing an Ontology
 
 9. Which of the following is the best practice when removing or changing terms that have already been used in annotations?
 
