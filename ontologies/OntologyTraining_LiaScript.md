@@ -155,7 +155,7 @@ There is no one-way or comprehensive methodology that you can always use that co
     - For the creation of a class hierarchy, there are three choices:
       
       - Top-down: Identify most general classes first and then work to specifics
-      - Botton-up: Identify specifics first and then work to general classes
+      - Bottom-up: Identify specifics first and then work to general classes
       - Combination
   
 5. Define the properties of classes
