@@ -79,7 +79,7 @@ Once a dataset is obtained, consider any data preparation steps that need to be 
 
 Before using a dataset for annotation work, researchers should review the dataset to determine whether the data contains [Protected Health Information (PHI)](https://chop.policymedical.net/policymed/anonymous/docViewer?stoken=14de2fa8-d9f5-4188-983b-29545b20809f&dtoken=6d8d4887-3dec-4a76-8d83-14726c00d185) as defined by HIPAA. The HIPAA Privacy Rule establishes protections for identifiable health information created, received, maintained, or transmitted in research. A review of the dataset includes checking for the 18 HIPAA identifiers:
 
-![List of the 18 HIPAA Identifiers incluing: names, social security numbers, device identifiers and serial numbers, addresses, medical record numbers, web URLs, elements of dates related to the individual, health plan beneficiary numbers, IP addresses, telephone numbers, account numbers, biometric identifiers, fax numbers, certificate/license numbers, full-face photographic images, email addresses, vehicle identifiers and serial numbers, any other unique identifying number, characteristic, or code.](media/Annotation_HIPAAPHI.png)
+![List of the 18 HIPAA Identifiers including: names, social security numbers, device identifiers and serial numbers, addresses, medical record numbers, web URLs, elements of dates related to the individual, health plan beneficiary numbers, IP addresses, telephone numbers, account numbers, biometric identifiers, fax numbers, certificate/license numbers, full-face photographic images, email addresses, vehicle identifiers and serial numbers, any other unique identifying number, characteristic, or code.](media/Annotation_HIPAAPHI.png)
 
 If annotation work involves identifiable or potentially identifiable data, the activity likely must be covered by an Institutional Review Board (IRB) protocol. Even when annotation is part of secondary data use, IRB review is often necessary to confirm the appropriate regulatory pathway, document privacy safeguards, and establish data access conditions. When in doubt, consult the IRB. Additionally, all individuals who will access the data (including annotators) must abide by all applicable laws, regulations, policies, and agreements. This includes but is not limited to being named in the IRB protocol (where required), completing all required training, and, if accessing CHOP data, being an active Workforce member (e.g., a regular employee or non-traditional personnel (NTP)).
 
@@ -154,23 +154,42 @@ As annotators are human, their lived experiences and biases shape how they label
 [(X)] B. Producing high-quality, expert‑validated labels to enable reliable model training and evaluation 
 [( )] C. Ensuring annotations are proprietary and non‑shareable 
 [( )] D. Automating all data cleaning steps 
+***
+<div class = "answer">
 
+Gold-standard annotated datasets provide trusted, high-quality labels that can be used to train, validate, and evaluate models. They serve as a benchmark for measuring the quality of both human and machine-generated results. Increasing dataset size and automating data cleaning may be beneficial, but they are not the primary goal of creating a gold-standard dataset. 
 
----
+</div>
+
+***
+
 
 2. Which of the following is **not** a quality of high-quality, gold-standard labeled data?
 [( )] A. Performant
 [( )] B. Consistent
 [(X)] C. Simple
 [( )] D. Unbiased
+***
+<div class = "answer">
 
----
+While annotated datasets should be performant, consistent, and unbiased to be considered "gold-standard", there is no requirement that they be simple. They should also be accurate, diverse, and contextual. 
+
+</div>
+
+***
 
 3. True or false: High-quality annotations can improve model performance, interoperability, and reproducibility.
 - [(x)] True
 - [( )] False
+***
+<div class = "answer">
 
----
+High-quality annotations are consistent, correct, and contextual; this reduces errors, supports interoperability between different systems, and helps ensure reproducible results. This also enables reliable model training and evaluation, which can improve overall model performance. 
+
+</div>
+
+***
+
 
 4. Which pre-annotation activity most directly reduces privacy risk before annotation begins?
 
@@ -178,13 +197,31 @@ As annotators are human, their lived experiences and biases shape how they label
 [(X)] B. Deidentifying PHI or applying access controls and IRB review  
 [( )] C. Training annotators on the annotation tool  
 [( )] D. Creating detailed annotation guidelines  
+***
+<div class = "answer">
 
----
+While all of these answers can be important parts of creating gold-standard annotations, reducing privacy risk is best addressed by identifying and removing PHI when possible and by restricting data access to authorized individuals. 
 
-5. True or false: It is best practice to pilot annotation guidelines on as large a sample as possible.
+</div>
 
-[( )] True  
-[(X)] False 
+***
+
+
+5. Which activity helps ensure annotation guidelines are working as intended before full-scale annotation begins?
+
+[(X)] A. Completing and reviewing test annotations.
+[( )] B. Increasing the dataset sample size.
+[( )] C. Allowing annotators to create their own labeling rules
+[( )] D. Delaying training until gold-standard annotation begins
+***
+
+<div class = "answer">
+
+Test annotations allow teams to verify that annotators understand the guidelines, identify misunderstandings, uncover edge cases, and refine standards before full-scale annotation begins. Increasing the sample size can be useful in certain circumstances, but won't help evaluate guideline quality. Allowing annotators to create their own labeling rules would undermine the creation of consistent labels, as would delaying training until after work begins. 
+
+</div>
+
+***
 
 ## Best Practices: During Annotation
 
@@ -264,7 +301,7 @@ When considering which metric to use, keep in mind that both the Cohen and Fleis
 <div class = "important">
 <b style="color: rgb(var(--color-highlight));">Important note</b><br>
 
-In conventional surveys, when the task is to answer a set of (multi-choice) questions, the raters choose among a set of pre-defined choices, and their interrater agreement can be measured using Kappa metrics. For example, Cohen's Kappa can be used for exactly two raters and Fleiss' Kappa for three or more raters or when different sets of raters evaluate different items. However, an annotation project may be more complex than answering multi-choice questions. For example, in a phenotyping task where the rater is tasked to find the phrase associated with a specific symptom (e.g., Nausea) and then assign a severity level to it (e.g., Grade 3), each time, the rater is answering two questions (instead of one in conventional surveys). First, the rater is identifying the span/phrase in the text with marking begin index to end index, and then assigning a tag (here, the severity level) from the defined ontology. While you can still use Kappa metrics to measure the interrater agreement, note that you first need to map the raters' spans, and that by itself can showcase variability or otherwise disagreement among them. As a result, the standard Kappa value interpretation may be unrealistic to achieve.
+In conventional surveys, when the task is to answer a set of (multi-choice) questions, the raters choose among a set of pre-defined choices, and their inter-rater agreement can be measured using Kappa metrics. For example, Cohen's Kappa can be used for exactly two raters and Fleiss' Kappa for three or more raters or when different sets of raters evaluate different items. However, an annotation project may be more complex than answering multi-choice questions. For example, in a phenotyping task where the rater is tasked to find the phrase associated with a specific symptom (e.g., Nausea) and then assign a severity level to it (e.g., Grade 3), each time, the rater is answering two questions (instead of one in conventional surveys). First, the rater is identifying the span/phrase in the text with marking begin index to end index, and then assigning a tag (here, the severity level) from the defined ontology. While you can still use Kappa metrics to measure the inter-rater agreement, note that you first need to map the raters' spans, and that by itself can showcase variability or otherwise disagreement among them. As a result, the standard Kappa value interpretation may be unrealistic to achieve.
 
 </div>
 
@@ -286,62 +323,104 @@ In conventional surveys, when the task is to answer a set of (multi-choice) ques
 [(X)] B. Measure inter-annotator agreement and identify ambiguous guidelines  
 [( )] C. Increase annotator throughput by duplicating work  
 [( )] D. Train annotators to use the annotation software  
+***
 
----
+<div class = "answer">
 
-7. In which phase of the annotation workflow is there a focus on achieving consistent annotations across annotators?
+ The validation phase focuses on determining whether annotators are applying labels consistently. While this would seem to duplicate work, comparing annotations across multiple annotators helps identify unclear instructions, ambiguous categories, and areas where additional training or guideline refinement may be needed. 
 
-[( )] A.Assessment  
-[( )] B. Training  
-[(X)] C. Validation  
-[( )] D. Gold-standard annotation  
+</div>
 
----
+*** 
 
-8. Which strategies help reduce annotator bias and improve annotation quality? (Select all that apply.)
+7. Which strategies help reduce annotator bias and improve annotation quality? (Select all that apply.)
 
 [[X]] A. Recruiting annotators with diverse backgrounds  
 [[X]] B. Providing ongoing training, examples, and feedback channels  
 [[ ]] C. Allowing annotators to develop private undocumented rules  
 [[X]] D. Using subject-matter experts for complex clinical judgments  
+***
 
----
+<div class = "answer">
 
-9. True or false: For highly technical clinical annotation tasks, untrained crowd annotators are as suitable as domain experts.
+Recruiting annotators with diverse backgrounds can help reduce systematic bias. Ongoing training, examples, and communication channels improve consistency and understanding of guidelines, while private, undocumented labeling rules undermine that consistency. Subject-matter experts are essential for understanding complex clinical contexts, improving the overall quality of the annotations. 
+
+</div>
+
+***
+
+8. True or false: For highly technical clinical annotation tasks, untrained crowd annotators are as suitable as domain experts.
 
 [( )] True  
 [(X)] False  
+***
 
----
+<div class = "answer">
 
-10. Which QA technique is most useful for identifying systematic annotation errors concentrated in ambiguous cases?
+Technical clinical annotation often requires specialized knowledge to correctly interpret the data and apply labels consistently and correctly. Depending on project needs, annotators should either have domain expertise or receive sufficient subject-matter training before contributing. 
+
+</div>
+
+***
+
+9. Which QA technique is most useful for identifying systematic annotation errors concentrated in ambiguous cases?
 
 [( )] A. Random spot audits only  
 [( )] B. Increasing the number of annotators per item to 10  
 [( )] C. Deleting ambiguous items from the dataset  
 [(X)] D. Targeted audits focused on items with high annotator disagreement  
+***
 
----
+<div class = "answer">
 
-11. Embedding items with predetermined correct labels into annotation batches to monitor annotator performance would be an example of an ______ task.
+Targeted QA focuses attention on cases where annotators disagree. These disagreements often reveal confusing instructions, unclear definitions, or challenging edge cases and can provide valuable insight for improving annotation guidelines. While random spot checks are also an important component of the QA process, they might miss patterns in annotation errors. Increasing the number of annotators can be helpful in some cases by adding additional perspectives, this does not necessarily help identify systemic errors. Finally, ambiguous items are important to include as they represent real-world examples, and excluding them would lead to weaknesses in the annotated dataset. 
+
+</div>
+
+***
+
+10. Embedding items with predetermined correct labels into annotation batches to monitor annotator performance would be an example of a[n] ______ task.
 
 [[audit]]
+***
 
----
+<div class = "answer">
 
-12. Which IAA metrics are appropriate choices depending on task and number of annotators? (Select all that apply.)
+Audit tasks are inserted into normal annotation work to evaluate quality and consistency. Because the expected answers are already known, they can be used to monitor annotator performance and identify necessary refinements to the guidelines or training processes.
+
+</div>
+
+***
+
+11. Which IAA metrics are appropriate choices depending on task and number of annotators? (Select all that apply.)
 
 [[X]] A. Cohen’s kappa  
 [[X]] B. Fleiss’ kappa  
 [[X]] C. Krippendorff’s alpha  
 [[ ]] D. Bayesian Information Criterion (BIC)  
+***
 
----
+<div class = "answer">
 
-13. True or false: A very high percent agreement always implies a high kappa score.
+Cohen's kappa, Fleiss' kappa, and Krippendorff's alpha are all recognized methods for measuring inter-annotator agreement. The most appropriate method depends on the project design, number of annotators, and annotation task. BIC is not an inter-annotator agreement metric, but a criterion for selecting the best among a finite set of models. 
+
+</div>
+
+***
+
+12. True or false: A very high percent inter-rater agreement always implies a high kappa score.
 
 [( )] True  
-[(X)] False  
+[(X)] False
+***
+
+<div class = "answer">
+
+Due to the kappa paradox, annotators may appear to agree frequently while still receiving a relatively low kappa score; percent agreement and kappa scores are therefore not interchangeable measures. 
+
+</div>
+
+***  
 
 ## Best Practices: Post-Annotation
 
@@ -432,34 +511,64 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 
 ## Knowledge Check: Post Annotation
 
- 14. Which of the following should be included in the final data package for a gold dataset? (Select the best single answer.)
+ 13. Which of the following should be included in the final data package for a gold dataset? (Select the best single answer.)
 
 [( )] A. Raw data only  
 [(X)] B. Machine-readable annotation files, README/technical docs, ontology exports, and provenance/QA metrics  
 [( )] C. Only a summary slide deck with results  
 [( )] D. Encrypted proprietary formats only  
+***
 
----
+<div class = "answer">
 
-15. The principles summarized by the acronym FAIR stand for Findable, Accessible, Interoperable, and ______.
+A reusable gold-standard dataset should include not only the annotations themselves, but also all of the files necessary to interpret, reproduce, and reuse the dataset. This includes any documentation, ontology information, and quality metrics. 
+
+</div>
+
+***  
+
+14. The principles summarized by the acronym FAIR stand for Findable, Accessible, Interoperable, and ______.
 
 [[Reusable]]
+***
 
----
+<div class = "answer">
 
-16. Which of the following is a recommended archival practice for long-term dataset reuse?
+The principles of FAIR increase the value of research data by ensuring that these data can be easily found, used, and reproduced by others in the research community. 
+
+</div>
+
+***  
+
+15. Which of the following is a recommended archival practice for long-term dataset reuse?
 
 [(X)] A. Deposit in a trusted repository and include metadata/documentation  
 [( )] B. Store only on a local hard drive with no README  
 [( )] C. Use a proprietary undocumented file format  
 [( )] D. Avoid documenting version history to reduce complexity  
+***
 
----
+<div class = "answer">
 
-17. True or false: Before sharing a dataset externally, PHI must be removed or access must be restricted in accordance with IRB/HIPAA and organizational policies.
+Trusted repositories provide durable storage, structured metadata, citation mechanisms, and access controls, all of which support findability and accessibility. Comprehensive documentation ensures that future users can understand and interpret the dataset, supporting appropriate reuse. 
+
+</div>
+
+***  
+
+16. True or false: Before sharing a dataset externally, PHI must be removed or access must be restricted in accordance with IRB/HIPAA and organizational policies.
 
 [(X)] True  
-[( )] False 
+[( )] False
+***
+
+<div class = "answer">
+
+To protect patient privacy, it is crucial that PHI is not revealed to anyone who does not require access.
+
+</div>
+
+***   
 
 ## Checklist
 
