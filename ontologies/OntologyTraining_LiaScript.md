@@ -58,15 +58,29 @@ As determining key terms for labels is one of the first steps in creating Annota
 [(X)] B. An ontology is a richer formal model that can express multiple relationship types and constraints; a taxonomy is typically a simple hierarchical classification  
 [( )] C. Taxonomies always include inference capabilities and OWL semantics  
 [( )] D. Ontologies are always flat lists of terms  
+***
 
----
+<div class = "answer">
+
+While taxonomies are hierarchical and relatively simple, ontologies are more complex, essentially modeling connections between taxonomies. Therefore, they cannot be merely a flat list of terms! And _ontologies_ have inference capabilities, not taxonomies.   
+
+</div>
+
+*** 
 
 2. True or false: Ontologies improve computability and interoperability by providing formal definitions, relationships, and constraints.
 
 [(X)] True  
 [( )] False  
+***
 
----
+<div class = "answer">
+
+Ontologies model relationships in a rich, complex, interconnected way that can be greatly leveraged by machines. 
+
+</div>
+
+***
 
 3. You should prefer an ontology over a simple label list when: (Select all that apply.)
 
@@ -74,8 +88,15 @@ As determining key terms for labels is one of the first steps in creating Annota
 [[X]] B. You need computable definitions to support reasoning or mapping across vocabularies  
 [[ ]] C. The project only requires a short, fixed hierarchical label list with no relationships  
 [[X]] D. Reuse and interoperability with other datasets or EHR systems are goals  
+***
 
----
+<div class = "answer">
+
+If you have a simple project that only requires a short, fixed hierarchical label list with no relationships, a taxonomy could be sufficient. In all of these other cases, an ontology would be more appropriate. 
+
+</div>
+
+***
 
 ## Existing Ontologies
 ![Three cards detailing existing ontologies used in biomedical research: HPO, SNOMED and UMLS. EAch has its own card with matching icon](media/Ontologies_Exisisting.png)
@@ -118,15 +139,21 @@ The [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/um
 [( )] B. SNOMED CT  
 [(X)] C. UMLS  
 [( )] D. Protégé  
+***
 
----
+<div class = "answer">
+
+UMLS serves as a bridge across more than 200 biomedical vocabularies by linking synonymous concepts through a unified concept identifier (CUI) system. This allows concepts from systems such as HPO and SNOMED CT to be mapped together. Protégé is an ontology editing tool, not a vocabulary resource. 
+
+</div>
+
+***
 
 5. True or false: SNOMED CT is primarily designed as a comprehensive clinical terminology for EHR interoperability.
 
 [(X)] True  
 [( )] False  
 
----
 
 ## Creating an Ontology 
 
@@ -202,8 +229,15 @@ For more detailed information on the steps outlined, view [Ontology Development 
 6. Before building a new ontology, it is recommended to consider reusing or ______ an existing ontology.
 
 [[extending]]
+***
 
----
+<div class = "answer">
+
+Given their complexity, building a new ontology requires a significant investment of time and effort. Therefore, where possible, extending an existing ontology to meet your needs can be more efficient. 
+
+</div>
+
+***
 
 7. Which steps are important when creating a practical ontology for annotation projects? (Select all that apply.)
 
@@ -211,14 +245,28 @@ For more detailed information on the steps outlined, view [Ontology Development 
 [[ ]] B. Omit documentation to keep the ontology compact  
 [[X]] C. Enumerate terms and build class hierarchy  
 [[X]] D. Define properties (domain, range, cardinality) and document semantics  
+***
 
----
+<div class = "answer">
+
+When creating an ontology, define your domain and scope (why are you building the ontology?), defining your terms and building your class hierarchy, and defining the properties of your classes are all steps in the ontology creation process. Omitting documentation might make the ontology compact, but will ultimately make it more difficult to understand, maintain, reuse, and share. 
+
+</div>
+
+***
 
 8. When constructing classes and properties, top-down, bottom-up, or ______ approaches are commonly used (one word).
 
 [[combination]]
+***
 
----
+<div class = "answer">
+
+A combination approach to constructing classes and properties incorporates elements of both top-down and bottom-up approaches. 
+
+</div>
+
+***
 
 ## Managing an Ontology 
 
@@ -246,15 +294,29 @@ Within Arcus labs, it is recommended to maintain your ontology terms, relationsh
 [(X)] B. Mark the term obsolete/deprecated, retain it in version history, and document the change  
 [( )] C. Rename silently without notifying annotators  
 [( )] D. Remove all annotations that used the term  
+***
 
----
+<div class = "answer">
+
+Marking a removed or changed term and documenting the change preserves the integrity of existing annotations and the historical record. Deleting the old term can break existing annotations and can "change history". If this removal is silent, it can also confuse other annotators. Removing all annotations that used the old term will eliminate "broken" annotations, but at the cost of potentially valuable data. 
+
+</div>
+
+***
 
 10. Version control (e.g., GitHub) and clear commit messages are recommended for managing ontology files and changes.
 
 [(X)] True  
 [( )] False  
+***
 
----
+<div class = "answer">
+
+Version control allows changes to the ontology to be preserved in the historical record, with supports transparency. Clear commit messages ensure that changes are well-documented and able to be understood by collaborators, now and in the future. 
+
+</div>
+
+***
 
 11. Which free/open-source tool is recommended for building and editing OWL ontologies?
 
@@ -262,31 +324,15 @@ Within Arcus labs, it is recommended to maintain your ontology terms, relationsh
 [(X)] B. Protégé  
 [( )] C. Photoshop  
 [( )] D. ArcGIS  
+***
 
----
+<div class = "answer">
 
-12. Which of the following is **not** an example of an interoperable file format suitable for exporting a created ontology?
+Protégé a free, open-source ontology editor that supports standard ontology formats such as OWL and is well suited for creating and editing ontologies.
 
-[(X)] PDF  
-[( )] OWL  
-[( )] SKOS  
-[( )] CSV  
+</div>
 
----
-
-13. Best practices for using ontologies in annotation projects include: (Select all that apply.)
-
-[[X]] A. Embedding ontology term definitions and examples in annotation guidelines  
-[[ ]] B. Updating the ontology without retraining annotators or revising guidelines  
-[[X]] C. Coordinating ontology updates with annotator retraining and guideline revisions  
-[[X]] D. Preferring reuse/extension of well-maintained ontologies over building new ones when possible  
-
----
-
-14. True or false: Keeping ontology mappings and examples in the annotation guideline helps annotators choose consistent terms.
-
-[(X)] True  
-[( )] False  
+***
 
 ## Sources
 
