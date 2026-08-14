@@ -382,6 +382,11 @@ Targeted QA focuses attention on cases where annotators disagree. These disagree
 10. Embedding items with predetermined correct labels into annotation batches to monitor annotator performance would be an example of a[n] ______ task.
 
 [[audit]]
+<script>
+let input = "@input".trim().toLowerCase()
+
+input == "audit"
+</script>
 ***
 
 <div class = "answer">
@@ -530,6 +535,11 @@ A reusable gold-standard dataset should include not only the annotations themsel
 14. The principles summarized by the acronym FAIR stand for Findable, Accessible, Interoperable, and ______.
 
 [[Reusable]]
+<script>
+let input = "@input".trim().toLowerCase()
+
+input == "reusable"
+</script>
 ***
 
 <div class = "answer">

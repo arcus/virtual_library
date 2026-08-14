@@ -229,6 +229,11 @@ For more detailed information on the steps outlined, view [Ontology Development 
 6. Before building a new ontology, it is recommended to consider reusing or ______ an existing ontology.
 
 [[extending]]
+<script>
+let input = "@input".trim().toLowerCase()
+
+input == "extending" || input == "extend"
+</script>
 ***
 
 <div class = "answer">
@@ -258,6 +263,11 @@ When creating an ontology, define your domain and scope (why are you building th
 8. When constructing classes and properties, top-down, bottom-up, or ______ approaches are commonly used (one word).
 
 [[combination]]
+<script>
+let input = "@input".trim().toLowerCase()
+
+input == "combination"
+</script>
 ***
 
 <div class = "answer">
