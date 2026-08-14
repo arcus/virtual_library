@@ -1,3 +1,27 @@
+<!--
+title: Ontologies
+
+@comment
+
+
+@end
+
+
+@learning_objectives  
+
+At the end of this module, you will emerge with the knowledge of: 
+
+- 
+
+@end
+
+language: en
+mode: Textbook
+
+link:  https://cdn.jsdelivr.net/gh/arcus/virtual_library@main/assets/styles.css
+import: https://raw.githubusercontent.com/arcus/virtual_library/main/_module_templates/macros.md
+-->
+
 ## Ontologies
 
 ![Side-by-side comparison of taxonomy and ontology structures: taxonomy shown as a strict hierarchical tree, ontology shown as a network of concepts connected through multiple relationship types.](media/Ontologies_OntovsTax.png)
