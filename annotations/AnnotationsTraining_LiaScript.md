@@ -91,7 +91,7 @@ Depending on the protocol and intended reuse, datasets may need to be de-identif
 Begin defining clear annotation guidelines through the establishment of a set of instructions that are easy to understand and remain consistent across all data points. Begin by:
 
 - Determining key terms for labels
-  - Creating an ontology for tagging OR utilizing an existing ontology (HPO, SNOWMED, UMLS) ensuring that labeling criteria are well defined and that annotators are following guidelines (view the [Ontologies learning module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/virtual_library/refs/heads/annotations-ontologies/ontologies/OntologyTraining_LiaScript.md#1) for more information).
+  - Creating an ontology for tagging OR utilizing an existing ontology (HPO, SNOWMED, UMLS) ensuring that labeling criteria are well defined and that annotators are following guidelines (view the [Ontologies learning module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/virtual_library/refs/heads/main/ontologies/OntologyTraining_LiaScript.md#1) for more information).
 - Outlining the end goal of the project to show the bigger picture
 - Detailing specific labeling instructions including providing detailed examples that outline realistic scenarios to help annotators identify edge cases and complex patterns
 
