@@ -255,7 +255,7 @@ It is important to remember that there is no one solution or one agreement-level
 #### QA Process
  ![Teal and white flowchart showing the annotation QA cycle: three QA methods (Audit Tasks, Targeted QA, Random QA) feed into an Improve Guidelines step, which leads to Continue Annotation, forming a continuous feedback loop.](media/Annotation_QAProcess.png)
 
-As part of training, there will need to be regular, continuous review of errors or inconsistencies among annotators through an established QA process that assesses the quality of the labels. Some ways to do that:
+As part of training, there will need to be regular, continuous review of errors or inconsistencies among annotators through an established Quality Assurance (QA) process that assesses the quality of the labels. Some ways to do that:
 
 - Audit tasks: Include "audit" tasks among regular tasks to test the annotation work quality. These tasks should not differ from other work items to avoid bias.
 - Targeted QA: Prioritize work items that contain disagreements for annotators to review as part of a peer review process or supervisor adjudication.
