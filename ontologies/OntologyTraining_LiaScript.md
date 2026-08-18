@@ -130,7 +130,9 @@ If you have a simple project that only requires a short, fixed hierarchical labe
 ## Existing Ontologies
 ![Three cards detailing existing ontologies used in biomedical research: HPO, SNOMED and UMLS. EAch has its own card with matching icon](media/Ontologies_Exisisting.png)
 
-Detailed here are three existing ontologies that you could use as the ontology for the key terms for your labels in your annotation project: Human Phenotype Ontology (HPO), SNOMED CT, and the Unified Medical Language System (UMLS). 
+Building a custom ontology for data annotation often leads to isolated data that cannot connect with global health records. On the other hand, using a standard ontology like SNOMED CT or the Human Phenotype Ontology (HPO) saves time, ensures consistency, and helps other researchers understand the annotated data easier and fosters more collaborations.
+
+Detailed here are three existing ontologies that you could use as the ontology for the key terms for your labels in your annotation project: HPO, SNOMED CT, and the Unified Medical Language System (UMLS). 
 
 ### HPO
 
