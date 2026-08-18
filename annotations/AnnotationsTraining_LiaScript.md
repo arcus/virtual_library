@@ -164,7 +164,7 @@ Gold-standard annotated datasets provide trusted, high-quality labels that can b
 ***
 
 
-2. Which of the following is **not** a quality of high-quality, gold-standard labeled data?
+2. Which of the following is **not necessary** for a high-quality, gold-standard labeled dataset?
 [( )] A. Performant
 [( )] B. Consistent
 [(X)] C. Simple
