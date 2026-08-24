@@ -180,10 +180,27 @@ UMLS serves as a bridge across more than 200 biomedical vocabularies by linking 
 
 ***
 
-5. True or false: SNOMED CT is primarily designed as a comprehensive clinical terminology for EHR interoperability.
+5. Which of the following describe the relationships in the HPO? Select all that apply. 
+
+[[X]] A. Is-a
+[[ ]] B. Part-of
+[[X]] C. Class-subclass
+[[X]] D. Transitive
+
+***
+
+<div class = "answer">
+
+HPO relationships are simple "is-a"/class-subclass relationships which are also transitive (inherited up all paths to the root). While "part-of" relationships exists in many ontologies, they do not exist in the HPO. 
+
+</div>
+
+***
+
+6. True or false: SNOMED CT is primarily designed as a comprehensive clinical terminology for EHR interoperability.
 
 [(X)] True  
-[( )] False  
+[( )] False
 
 
 ## Creating an Ontology 
@@ -257,7 +274,7 @@ For more detailed information on the steps outlined, view [Ontology Development 
 
 ### Knowledge Check: Creating an Ontology 
 
-6. Before building a new ontology, it is recommended to consider reusing or ______ an existing ontology.
+7. Before building a new ontology, it is recommended to consider reusing or ______ an existing ontology.
 
 [[extending]]
 <script>
@@ -275,7 +292,7 @@ Given their complexity, building a new ontology requires a significant investmen
 
 ***
 
-7. Which steps are important when creating a practical ontology for annotation projects? (Select all that apply.)
+8. Which steps are important when creating a practical ontology for annotation projects? (Select all that apply.)
 
 [[X]] A. Define domain and scope  
 [[ ]] B. Omit documentation to keep the ontology compact  
@@ -291,7 +308,7 @@ When creating an ontology, define your domain and scope (why are you building th
 
 ***
 
-8. When constructing classes and properties, top-down, bottom-up, or ______ approaches are commonly used (one word).
+9. When constructing classes and properties, top-down, bottom-up, or ______ approaches are commonly used (one word).
 
 [[combination]]
 <script>
@@ -329,7 +346,7 @@ Within Arcus labs, it is recommended to maintain your ontology terms, relationsh
 
 ### Knowledge Check: Managing an Ontology
 
-9. Which of the following is the best practice when removing or changing terms that have already been used in annotations?
+10. Which of the following is the best practice when removing or changing terms that have already been used in annotations?
 
 [( )] A. Delete the old term immediately to prevent future use  
 [(X)] B. Mark the term obsolete/deprecated, retain it in version history, and document the change  
@@ -345,7 +362,7 @@ Marking a removed or changed term and documenting the change preserves the integ
 
 ***
 
-10. Version control (e.g., GitHub) and clear commit messages are recommended for managing ontology files and changes.
+11. Version control (e.g., GitHub) and clear commit messages are recommended for managing ontology files and changes.
 
 [(X)] True  
 [( )] False  
@@ -359,7 +376,7 @@ Version control allows changes to the ontology to be preserved in the historical
 
 ***
 
-11. Which free/open-source tool is recommended for building and editing OWL ontologies?
+12. Which free/open-source tool is recommended for building and editing OWL ontologies?
 
 [( )] A. Excel  
 [(X)] B. Protégé  
