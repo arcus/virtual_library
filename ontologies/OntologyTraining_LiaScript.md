@@ -186,7 +186,6 @@ UMLS serves as a bridge across more than 200 biomedical vocabularies by linking 
 [[ ]] B. Part-of
 [[X]] C. Class-subclass
 [[X]] D. Transitive
-
 ***
 
 <div class = "answer">
