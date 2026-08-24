@@ -514,7 +514,7 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 - [ ] Archival Plan
 - [ ] Sharing Plan
 
-## Knowledge Check: Post Annotation
+### Knowledge Check: Post Annotation
 
  13. Which of the following should be included in the final data package for a gold dataset? (Select the best single answer.)
 

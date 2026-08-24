@@ -255,7 +255,7 @@ _Note: In ontologies, properties and classes form a hierarchy and inherit the pr
 
 For more detailed information on the steps outlined, view [Ontology Development 101: A Guide to Creating Your First Ontology](https://protege.stanford.edu/publications/ontology_development/ontology101.pdf).
 
-## Knowledge Check: Creating an Ontology 
+### Knowledge Check: Creating an Ontology 
 
 6. Before building a new ontology, it is recommended to consider reusing or ______ an existing ontology.
 
@@ -327,7 +327,7 @@ Managing ontology terms over time involves three core activities: adding new ter
 
 Within Arcus labs, it is recommended to maintain your ontology terms, relationships, and definitions in GitHub, a web-based platform that uses Git to track changes to files over time, including files edited collaboratively by a team. GitHub is particularly well suited to ontology management because every change is automatically recorded in the repository history, eliminating the need to manually number or rename files to track versions. When making changes, it is helpful to distinguish between major updates (such as significant restructuring of classes or relationships) and minor updates (such as small definition edits) noting these differences in your commit messages. Consistent file naming conventions should be established from the outset within GitHub that is useful, consistent and well documented, [see this resource](https://storage.googleapis.com/arcus-edu-libsci/Arcus%20RDM%20Resources/fileNaming_bestPractices_MIT.pdf) for more information.
 
-## Knowledge Check: Managing an Ontology
+### Knowledge Check: Managing an Ontology
 
 9. Which of the following is the best practice when removing or changing terms that have already been used in annotations?
 
