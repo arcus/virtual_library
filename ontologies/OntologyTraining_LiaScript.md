@@ -162,7 +162,7 @@ Descriptions are the human readable terms that are associated with clinical idea
 
 The [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) is a collection of files and software developed by the National Library of Medicine that enables interoperability across biomedical computer systems. At its core, is the UMLS Metathesaurus, a large biomedical thesaurus organized by concept, which serves as a bridge connecting over [200 source vocabularies](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/), including SNOMED CT, HPO, ICD-10, RxNORM, etc., by linking synonymous terms to shared concepts. This means a clinician's SNOMED CT code, and a geneticist's HPO term can be recognized as referring to the same underlying concept, allowing seamless traversal across vocabularies. The Metathesaurus preserves each vocabulary's original meanings, concept meanings and relationships while surfacing cross vocabulary connections through a unified concept identifier (CUI) system. The [UMLS Metathesaurus Browser](https://uts.nlm.nih.gov/uts/umls/home) is a web interface for searching and exploring these linked concepts and their relationships interactively.
 
-If not done so already, you need to submit a license request to the UMLS Metathesaurus in order to access it. You can do this by: 
+If you have not already done so, you need to submit a license request to the UMLS Metathesaurus in order to access it. You can do this by: 
 1. Visiting the [login page](https://uts.nlm.nih.gov/uts/signup-login) and selecting "Research Organization" under the identity provider list
 2. Searching for "Children's Hospital of Philadelphia"
 3. Accepting the Terms & Conditions for the License Agreement
