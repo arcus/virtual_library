@@ -142,7 +142,7 @@ The HPO currently contains over 18,000 terms arranged in a directed acyclic grap
 
 ### SNOMED
 
-[SNOMED International](https://www.snomed.org/) is a not-for-profit organization that owns, administers, and develops SNOMED CT. SNOMED CT is a comprehensive, multilingual clinical healthcare terminology resource with scientifically validated clinical content, enabling consistent representation of clinical content in the electronic health records.
+[SNOMED International](https://www.snomed.org/) is a not-for-profit organization that owns, administers, and develops [SNOMED CT](https://snomedbrowser.org/?). SNOMED CT is a comprehensive, multilingual clinical healthcare terminology resource with scientifically validated clinical content, enabling consistent representation of clinical content in the electronic health records.
 
 The SNOMED CT logical model defines the way in which each type of SNOMED CT component and derivative is related and represented. The core component types in SNOMED CT are concepts, relationships, and descriptions.
 
