@@ -164,9 +164,10 @@ The [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/um
 
 If not done so already, you need to submit a license request to the UMLS Metathesaurus in order to access it. You can do this by: 
 1. Visiting the [login page](https://uts.nlm.nih.gov/uts/signup-login) and selecting "Research Organization" under the identity provider list
-2. Search for "Children's Hospital of Philadelphia"
-3. Accept the Terms & Conditions for the License Agreement
-4. Fill out the required fields on the License form
+2. Searching for "Children's Hospital of Philadelphia"
+3. Accepting the Terms & Conditions for the License Agreement
+4. Filling out the required fields on the License form
+
 You will receive an email once access has been granted.  
 
 ### Knowledge Check: Existing Ontologies
