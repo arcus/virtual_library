@@ -77,7 +77,7 @@ A knowledge graph is a graph-based data representation connecting real-world ent
 
 A knowledge graph can capture taxonomies using nodes and relationships that represent hierarchical structures. It can also capture ontologies using semantic nodes, relationships, and properties to provide meanings and logic. They become the organizing principles that provide meaning and structure to the knowledge graph.
 
-The "Generic Ontology Chart" seen on the **What is an Ontology?** page is an example of an Ontology being represented as a knowledge graph. Here is another example of a knowledge graph: 
+The "Generic Ontology Chart" seen on the **What is an Ontology?** page is an example of an ontology being represented as a knowledge graph. Here is another example of a knowledge graph: 
 
 ![Example Diagram of a Knowledge Graph](media/Ontology_KnowledgeGraph.png)
 
