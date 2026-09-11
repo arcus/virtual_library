@@ -73,9 +73,14 @@ A knowledge graph is a graph-based data representation connecting real-world ent
 - Edges: The relationship or connection between the nodes, indicating ownership, membership, dependency, interaction, etc.
 - Properties: The property keys that describe nodes or relationships, allowing the graph to store both facts and contextual attributes, reflecting how information is naturally connected. 
 
-Why is this important when we are talking about taxonomies and ontologies? Because knowledge graphs act as the operational layer, bringing taxonomies and ontologies to life by defining how the graph data is organized and interpreted.  
+**Why is this important when we are talking about taxonomies and ontologies? Because knowledge graphs act as the operational layer, bringing taxonomies and ontologies to life by defining how the graph data is organized and interpreted.**
 
 A knowledge graph can capture taxonomies using nodes and relationships that represent hierarchical structures. It can also capture ontologies using semantic nodes, relationships, and properties to provide meanings and logic. They become the organizing principles that provide meaning and structure to the knowledge graph.
+
+The "Generic Ontology Chart" seen on the What is an Ontology page is an example of an Ontology being represented as a knowledge graph. Here is another example: 
+
+![Example Diagram of a Knowledge Graph](media/Ontology_KnowledgeGraph.png)
+A knowledge graph captures instance data as nodes, relationships, and properties, while using taxonomies and ontologies as organizing principles.
 
 ### Why Ontology and Not Taxonomy
 
