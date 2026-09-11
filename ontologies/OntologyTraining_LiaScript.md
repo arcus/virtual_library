@@ -429,6 +429,8 @@ Earley Information Science. (n.d.). _What is the difference between taxonomy and
 
 Gargano, M.A., Matentzoglu, N., Coleman, B., Addo-Lartey, E.B., Anagnostopoulos, A.V., Anderton, J., Avillach, P., Bagley, A.M., Bakštein, E., Balhoff, J.P., Baynam, G., Bello, S.M., Berk, M., Bertram, H., Bishop, S., Blau, H., Bodenstein, D.F., Botas, P., Boztug, K., Cady, J., ... Robinson, P.N.. (2024). The Human Phenotype Ontology in 2024: phenotypes around the world. _Nucleic Acids Res, 52_(D1), D1333-D1346. <https://doi.org/10.1093/nar/gkad1005>
 
+Graph.Build. (n.d.). _Ontologies explained_. <https://graph.build/resources/ontology>
+
 Kempe, S. (2017, October 17). Taxonomy vs ontology: Machine learning breakthroughs. _Dataversity_. <https://www.dataversity.net/articles/taxonomy-vs-ontology-machine-learning-breakthroughs/>
 
 Laubheimer, P. (2022, July 3). Taxonomy 101: Definition, best practices, and how it complements other IA work. _Nielsen Norman Group_. <https://www.nngroup.com/articles/taxonomy-101/>
@@ -441,4 +443,8 @@ Ontology (information science). (2026, May 4). In Wikipedia. <https://en.wikiped
 
 SNOMED International. (n.d.). _SNOMED_. <https://www.snomed.org/>
 
+Stegeman, J. (2026, June 16). Taxonomy vs. ontology vs. knowledge graph: What's the difference? _Neo4j_. <https://neo4j.com/blog/knowledge-graph/taxonomy-vs-ontology-vs-knowledge-graph/>
+
 University of Michigan Library. (2026, April 17). Biomedical ontologies and controlled vocabularies. _Library Research Guides_. <https://guides.lib.umich.edu/ontology/ontologies>
+
+Wu, H. (2025, December 29). Knowledge graph vs ontology: Know the difference. _PuppyGraph_. <https://www.puppygraph.com/blog/knowledge-graph-vs-ontology>
