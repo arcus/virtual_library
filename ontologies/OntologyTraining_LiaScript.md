@@ -77,7 +77,7 @@ A knowledge graph is a graph-based data representation connecting real-world ent
 
 A knowledge graph can capture taxonomies using nodes and relationships that represent hierarchical structures. It can also capture ontologies using semantic nodes, relationships, and properties to provide meanings and logic. They become the organizing principles that provide meaning and structure to the knowledge graph.
 
-The "Generic Ontology Chart" seen on the What is an Ontology page is an example of an Ontology being represented as a knowledge graph. Here is another example: 
+The "Generic Ontology Chart" seen on the **What is an Ontology** page is an example of an Ontology being represented as a knowledge graph. Here is another example of a knowledge graph: 
 
 ![Example Diagram of a Knowledge Graph](media/Ontology_KnowledgeGraph.png)
 A knowledge graph captures instance data as nodes, relationships, and properties, while using taxonomies and ontologies as organizing principles.
@@ -94,6 +94,8 @@ An ontological approach captures connections naturally as most knowledge and con
 ### So What?
 
 As determining key terms for labels is one of the first steps in creating Annotation Guidelines, it is important to know if you will be utilizing an existing ontology or creating your own for the project. Below is information on three existing ontologies that you can utilize as well as information on creating your own ontology if the existing ones do not meet your needs. HPO and SNOMED are already available in the BRAT annotation tool within Arcus labs. For a larger listing of existing Biomedical Ontologies, [see this resource](https://guides.lib.umich.edu/ontology/ontologies#:~:text=ICD%20-%20International%20Classification%20of%20Diseases,Nomenclature%20of%20Medicine-Clinical%20Terms) from the University of Michigan.
+
+**Important note to remember when considering utilizing an existing ontology versus creating your own: Building a custom ontology for data annotation often leads to isolated data that cannot connect with global health records. On the other hand, using a standard ontology like SNOMED CT or the Human Phenotype Ontology (HPO) saves time, ensures consistency, and helps other researchers understand the annotated data easier and fosters more collaborations.**
 
 ### Knowledge Check: Ontologies
 
@@ -148,7 +150,7 @@ If you have a simple project that only requires a short, fixed hierarchical labe
 
 Building a custom ontology for data annotation often leads to isolated data that cannot connect with global health records. On the other hand, using a standard ontology like SNOMED CT or the Human Phenotype Ontology (HPO) saves time, ensures consistency, and helps other researchers understand the annotated data easier and fosters more collaborations.
 
-Detailed here are three existing ontologies that you could use as the ontology for the key terms for your labels in your annotation project: HPO, SNOMED CT, and the Unified Medical Language System (UMLS). 
+Detailed here are three existing ontologies that you could use as the ontology for the key terms for your labels in your annotation project: HPO, SNOMED CT, and the Unified Medical Language System (UMLS). Keep in mind when reviewing these ontologies on their websites, they are not shown in a knowledge graph format. However, that graph representation can be applied to capture the nodes, edges, and properties, to help you better understand the structure of the ontology being used in your project. 
 
 ### HPO
 
