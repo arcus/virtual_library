@@ -96,7 +96,9 @@ An ontological approach captures connections naturally as most knowledge and con
 
 As determining key terms for labels is one of the first steps in creating Annotation Guidelines, it is important to know if you will be utilizing an existing ontology or creating your own for the project. Below is information on three existing ontologies that you can utilize as well as information on creating your own ontology if the existing ones do not meet your needs. HPO and SNOMED are already available in the BRAT annotation tool within Arcus labs. For a larger listing of existing Biomedical Ontologies, [see this resource](https://guides.lib.umich.edu/ontology/ontologies#:~:text=ICD%20-%20International%20Classification%20of%20Diseases,Nomenclature%20of%20Medicine-Clinical%20Terms) from the University of Michigan.
 
-**Important note to remember when considering utilizing an existing ontology versus creating your own: Building a custom ontology for data annotation often leads to isolated data that cannot connect with global health records. On the other hand, using a standard ontology like SNOMED CT or the Human Phenotype Ontology (HPO) saves time, ensures consistency, and helps other researchers understand the annotated data easier and fosters more collaborations.**
+>**Important note to remember when considering utilizing an existing ontology versus creating your own:**
+>
+>Building a custom ontology for data annotation often leads to isolated data that cannot connect with global health records. On the other hand, using a standard ontology like SNOMED CT or the Human Phenotype Ontology (HPO) saves time, ensures consistency, and helps other researchers understand the annotated data easier and fosters more collaborations.
 
 ### Knowledge Check: Ontologies
 
