@@ -85,18 +85,40 @@ _A knowledge graph captures instance data as nodes, relationships, and propertie
 
 ### Why Ontology and Not Taxonomy
 
-An ontological approach captures connections naturally as most knowledge and concepts do not exist in isolation as they do in most taxonomies.
+A taxonomy organizes concepts into a strict hierarchy: each term has one parent, with siblings. That works well for simple classification, but most clinical knowledge is not well captured in a single hierarchy. An ontology's graph structure, with multiple parents and relationships for a term, captures real-world connections instead of forcing them into one branch.
 
-- Ontologies adapt easily to evolving ideas without rebuilding the system
-- Relationships are clearly defined
-- Connections revealed that might otherwise be missed via a taxonomy
-- AI thrives on interconnected data
+- Ontologies better adapt without rebuilding the system. New concepts fit in as understanding evolves, no restructuring required.
+- Relationships are clearly defined. Links are typed (is-a, part-of, causes), allowing for a clear understanding of the connection.
+- Connections create depth that might be missed in a taxonomy. Connections create depth that might be missed in a taxonomy. Multi-parent structure reveals cross-category links a strict tree would miss.
+- AI thrives on interconnected data. Typed, interconnected data gives algorithms more to reason over than a flat hierarchy.
 
-### So What?
+### Applying This to Your Work
 
-As determining key terms for labels is one of the first steps in creating Annotation Guidelines, it is important to know if you will be utilizing an existing ontology or creating your own for the project. Below is information on three existing ontologies that you can utilize as well as information on creating your own ontology if the existing ones do not meet your needs. HPO and SNOMED are already available in the BRAT annotation tool within Arcus labs. For a larger listing of existing Biomedical Ontologies, [see this resource](https://guides.lib.umich.edu/ontology/ontologies#:~:text=ICD%20-%20International%20Classification%20of%20Diseases,Nomenclature%20of%20Medicine-Clinical%20Terms) from the University of Michigan.
+Choosing key terms for your labels is one of the first steps in building Annotation Guidelines; early on you'll need to decide: use an existing ontology, or create your own.
 
->**Important note to remember when considering utilizing an existing ontology versus creating your own:**
+The next sections cover the three most commonly used ontologies in clinical research, along with guidance on creating your own if none of them fit your needs. HPO and SNOMED CT are already available in the BRAT annotation tool within Arcus Labs. For a broader list of biomedical ontologies, [see this resource](https://guides.lib.umich.edu/ontology/ontologies#:~:text=ICD%20-%20International%20Classification%20of%20Diseases,Nomenclature%20of%20Medicine-Clinical%20Terms) from the University of Michigan.
+
+## Why use an existing ontology instead of creating your own?
+
+A custom ontology can isolate your data, meaning it may not connect to other institutions' records, existing tools, or global health data standards. This can limit reuse and collaboration for your project and data in the future, and trying to crosswalk a custom ontology with common standards is difficult and time intensive. Standard ontologies like SNOMED CT and HPO save time (no need to define terms from scratch), keep annotations consistent across annotators and studies, and make your data easier for other researchers to interpret, reuse, and combine with theirs.
+
+## When should you use an existing ontology?
+
+Using an existing ontology is suggested as the default for any new annotation project, instead of a fallback.
+
+Existing ontologies cover the majority of clinical annotation needs, including cases that don't look like an exact match at first glance:
+
+- The term exists but isn't the first one you find. Try synonyms, alternate spellings, and related concepts before concluding a term is missing. 
+- The concept is covered, just not at the granularity you expected. A slightly broader or narrower term may still be usable.
+- No single ontology covers everything you need. It is common to draw terms from more than one ontology, for example: SNOMED CT for clinical findings and procedures, HPO for phenotypic terms, and UMLS as a crosswalk. Combining ontologies is standard practice, not a sign you should build your own. You can also start with an existing ontology and add custom terms if required.
+
+Before deciding a term doesn't exist, document what you searched and where. This makes the eventual decision on whether to use a broader parent term, flag a gap, or request a new term be added, easy for others to review.
+
+## When is creating your own ontology appropriate? 
+
+Only when existing ontologies genuinely don't cover your domain, for example: novel research areas, narrow study or domain specific constructs, or internal labels. Even then, consider whether a subset or extension of an existing ontology works before building from scratch.
+
+>**Remember**
 >
 >Building a custom ontology for data annotation often leads to isolated data that cannot connect with global health records. On the other hand, using a standard ontology like SNOMED CT or the Human Phenotype Ontology (HPO) saves time, ensures consistency, and helps other researchers understand the annotated data easier and fosters more collaborations.
 
