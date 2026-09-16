@@ -118,9 +118,12 @@ Before deciding a term doesn't exist, document what you searched and where. This
 
 Only when existing ontologies genuinely don't cover your domain, for example: novel research areas, narrow study or domain specific constructs, or internal labels. Even then, consider whether a subset or extension of an existing ontology works before building from scratch.
 
->**Remember**
->
->Building a custom ontology for data annotation often leads to isolated data that cannot connect with global health records. On the other hand, using a standard ontology like SNOMED CT or the Human Phenotype Ontology (HPO) saves time, ensures consistency, and helps other researchers understand the annotated data easier and fosters more collaborations.
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Remember</b><br>
+
+Building a custom ontology for data annotation often leads to isolated data that cannot connect with global health records. On the other hand, using a standard ontology like SNOMED CT or the Human Phenotype Ontology (HPO) saves time, ensures consistency, and helps other researchers understand the annotated data easier and fosters more collaborations.
+
+</div>
 
 ### Knowledge Check: Ontologies
 
