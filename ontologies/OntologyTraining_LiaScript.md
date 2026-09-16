@@ -98,11 +98,11 @@ Choosing key terms for your labels is one of the first steps in building Annotat
 
 The next sections cover the three most commonly used ontologies in clinical research, along with guidance on creating your own if none of them fit your needs. HPO and SNOMED CT are already available in the BRAT annotation tool within Arcus Labs. For a broader list of biomedical ontologies, [see this resource](https://guides.lib.umich.edu/ontology/ontologies#:~:text=ICD%20-%20International%20Classification%20of%20Diseases,Nomenclature%20of%20Medicine-Clinical%20Terms) from the University of Michigan.
 
-#### Why use an existing ontology instead of creating your own?
+**Why use an existing ontology instead of creating your own?**
 
 A custom ontology can isolate your data, meaning it may not connect to other institutions' records, existing tools, or global health data standards. This can limit reuse and collaboration for your project and data in the future, and trying to crosswalk a custom ontology with common standards is difficult and time intensive. Standard ontologies like SNOMED CT and HPO save time (no need to define terms from scratch), keep annotations consistent across annotators and studies, and make your data easier for other researchers to interpret, reuse, and combine with theirs.
 
-#### When should you use an existing ontology?
+**When should you use an existing ontology?**
 
 Using an existing ontology is suggested as the default for any new annotation project, instead of a fallback.
 
@@ -114,7 +114,7 @@ Existing ontologies cover the majority of clinical annotation needs, including c
 
 Before deciding a term doesn't exist, document what you searched and where. This makes the eventual decision on whether to use a broader parent term, flag a gap, or request a new term be added, easy for others to review.
 
-#### When is creating your own ontology appropriate? 
+**When is creating your own ontology appropriate?**
 
 Only when existing ontologies genuinely don't cover your domain, for example: novel research areas, narrow study or domain specific constructs, or internal labels. Even then, consider whether a subset or extension of an existing ontology works before building from scratch.
 
