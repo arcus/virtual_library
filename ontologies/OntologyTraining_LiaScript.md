@@ -189,9 +189,13 @@ The HPO currently contains over 18,000 terms arranged in a directed acyclic grap
 ![Screenshot of an HPO search for diabetes mellitus displaying the resulting hierarchy and term associations. There are numbers calling attention to certain elements.](media/Ontology_HPO.png)
 
 **1. Search Box​**
-**2. Parents:** Parent(s) of term. Here you can see that there are two different parents. All the terms are links if you want to view their parent(s)/children. A parent is a node in the graph format. ​
-**3. Children:** Children of term. Children are nodes in the graph format. Their edge, or relationship to the main term is that they are types of Diabetes mellitus. ​
-**4. Cross References:** Identifier numbers of this same term in SNOMEDCT_US and UMLS.​
+
+**2. Parents:** Parent(s) of term. Here you can see that there are two different parents. All the terms are links if you want to view their parent(s)/children. A parent is a node in the graph format. 
+​
+**3. Children:** Children of term. Children are nodes in the graph format. Their edge, or relationship to the main term is that they are types of Diabetes mellitus. 
+​
+**4. Cross References:** Identifier numbers of this same term in SNOMEDCT_US and UMLS.
+​
 **5. Term Associations**​
 
 ### SNOMED
@@ -215,9 +219,13 @@ Descriptions are the human readable terms that are associated with clinical idea
 ![Screenshot of a SNOMEDCT search for diabetes mellitus displaying the resulting hieararchy and concept details. There are numbers calling attention to certain elements.](media/Ontology_SNOMED_CT.png)
 
 **1. Search Box**
+
 **2. Search Results**
+
 **3. Concept Details:** Other details about the term can be reviewed in these other tabs.
-**4. Parents:** Parent(s) noted here. Select the > next to the parent to view the Parent of the Parent term. The Parent is considered a node when envisioning this as a graph. The relationship, or edge, between these two nodes is that Diabetes Mellitus (disorder) is a type of Disorder of glucose metabolism (disorder). ​
+
+**4. Parents:** Parent(s) noted here. Select the > next to the parent to view the Parent of the Parent term. The Parent is considered a node when envisioning this as a graph. The relationship, or edge, between these two nodes is that Diabetes Mellitus (disorder) is a type of Disorder of glucose metabolism (disorder). 
+​
 **5. Children:** Children listed here. Like the Parent, children are considered nodes when envisioning this as a graph and the edge, or relationship between them is that they are types of the Diabetes mellitus (disorder). ​
 
 ### UMLS
@@ -234,10 +242,14 @@ You will receive an email once access has been granted.
 
 ![Screenshot of a UMLS search for diabetes mellitus displaying the resulting hieararchy and concept details. There are numbers calling attention to certain elements.](media/Ontology_UMLS.png)
 
-**1. Definitions:** View definitions and additional details by expanding this section. ​
+**1. Definitions:** View definitions and additional details by expanding this section. 
+​
 **2. Related Concepts:** View related concepts under that tab including alternative_of, answer_to, associated_condition_of, etc. The related concepts are edges, and the descriptor (alternative_of, etc.) are the properties. ​
+
 **3. Cross References:** Identifier numbers of this same term in SNOMEDCT_US and HPO.​
-**4. Parents:** Parent, or node, broader concepts.​
+
+**4. Parents:** Parent, or node, broader concepts.
+​
 **5. Children:** Children, or node, narrower concepts​.
 
 ### Knowledge Check: Existing Ontologies
