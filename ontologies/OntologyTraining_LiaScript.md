@@ -186,6 +186,8 @@ The [Human Phenotype Ontology (HPO)](https://hpo.jax.org/) project provides an o
 
 The HPO currently contains over 18,000 terms arranged in a directed acyclic graph and are connected by is-a (subclass-of) edges, such that a term represents a more specific or limited instance of its parent term(s). All relationships in the HPO are is-a relationships, i.e. simple class-subclass relationships. For instance, [_Abnormal lens morphology_](https://hpo.jax.org/browse/term/HP:0000517) is-a [_Abnormal eye morphology_](https://hpo.jax.org/browse/term/HP:0012372). The relationships are transitive, meaning that they are inherited up all paths to the root. [_Phenotypic abnormality_](https://hpo.jax.org/browse/term/HP:0000118) is the main subontology of the HPO and contains descriptions of clinical abnormalities. Additional subontologies are provided to describe inheritance patterns, onset/clinical course, and modifiers of abnormalities.
 
+**HPO at a glance:**
+
 ![Screenshot of an HPO search for diabetes mellitus displaying the resulting hierarchy and term associations. There are numbers calling attention to certain elements.](media/Ontology_HPO.png)
 
 1. **Search Box​**
@@ -212,6 +214,8 @@ A relationship represents an association between two concepts. Relationships are
 
 Descriptions are the human readable terms that are associated with clinical ideas. Each description has a description type and may be marked "preferred for use" in particular languages or dialects. A fully specified name (FSN) is a type of description which uniquely and fully captures the meaning of the clinical idea. Synonyms are descriptions that allow the same concept to be expressed in different ways, each of which are associated with the same concept ID.
 
+**SNOMED at a glance:**
+
 ![Screenshot of a SNOMEDCT search for diabetes mellitus displaying the resulting hieararchy and concept details. There are numbers calling attention to certain elements.](media/Ontology_SNOMED_CT.png)
 
 1. **Search Box**
@@ -231,6 +235,8 @@ If you have not already done so, you need to submit a license request to the UML
 4. Filling out the required fields on the License form
 
 You will receive an email once access has been granted. 
+
+**UMLS at a glance:**
 
 ![Screenshot of a UMLS search for diabetes mellitus displaying the resulting hieararchy and concept details. There are numbers calling attention to certain elements.](media/Ontology_UMLS.png)
 
