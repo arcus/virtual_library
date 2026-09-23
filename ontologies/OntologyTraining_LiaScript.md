@@ -212,7 +212,7 @@ A relationship represents an association between two concepts. Relationships are
 
 Descriptions are the human readable terms that are associated with clinical ideas. Each description has a description type and may be marked "preferred for use" in particular languages or dialects. A fully specified name (FSN) is a type of description which uniquely and fully captures the meaning of the clinical idea. Synonyms are descriptions that allow the same concept to be expressed in different ways, each of which are associated with the same concept ID.
 
-![Screenshot of a SNOMEDCT search for diabetes mellitus displaying the resulting hieararchy and concept details. There are numbers calling attention to certain elements.](media/Ontology_SNOMED_CT)
+![Screenshot of a SNOMEDCT search for diabetes mellitus displaying the resulting hieararchy and concept details. There are numbers calling attention to certain elements.](media/Ontology_SNOMED_CT.png)
 
 1. Search Box
 2. Search Results
@@ -232,7 +232,7 @@ If you have not already done so, you need to submit a license request to the UML
 
 You will receive an email once access has been granted. 
 
-![Screenshot of a UMLS search for diabetes mellitus displaying the resulting hieararchy and concept details. There are numbers calling attention to certain elements.](media/Ontology_UMLS)
+![Screenshot of a UMLS search for diabetes mellitus displaying the resulting hieararchy and concept details. There are numbers calling attention to certain elements.](media/Ontology_UMLS.png)
 
 1. Definitions: View definitions and additional details by expanding this section. ​
 2. Related Concepts: View related concepts under that tab including alternative_of, answer_to, associated_condition_of, etc. The related concepts are edges, and the descriptor (alternative_of, etc.) are the properties. ​
