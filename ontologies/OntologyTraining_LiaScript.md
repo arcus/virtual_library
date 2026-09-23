@@ -186,6 +186,14 @@ The [Human Phenotype Ontology (HPO)](https://hpo.jax.org/) project provides an o
 
 The HPO currently contains over 18,000 terms arranged in a directed acyclic graph and are connected by is-a (subclass-of) edges, such that a term represents a more specific or limited instance of its parent term(s). All relationships in the HPO are is-a relationships, i.e. simple class-subclass relationships. For instance, [_Abnormal lens morphology_](https://hpo.jax.org/browse/term/HP:0000517) is-a [_Abnormal eye morphology_](https://hpo.jax.org/browse/term/HP:0012372). The relationships are transitive, meaning that they are inherited up all paths to the root. [_Phenotypic abnormality_](https://hpo.jax.org/browse/term/HP:0000118) is the main subontology of the HPO and contains descriptions of clinical abnormalities. Additional subontologies are provided to describe inheritance patterns, onset/clinical course, and modifiers of abnormalities.
 
+![Screenshot of an HPO search for diabetes mellitus displaying the resulting hierarchy and term associations. There are numbers calling attention to certain elements.](media/Ontology_HPO.png)
+
+1. Search Box​
+2. Parents: Parent(s) of term. Here you can see that there are two different parents. All the terms are links if you want to view their parent(s)/children. A parent is a node in the graph format. ​
+3. Children: Children of term. Children are nodes in the graph format. Their edge, or relationship to the main term is that they are types of Diabetes mellitus. ​
+4. Cross References: Identifier numbers of this same term in SNOMEDCT_US and UMLS.​
+5. Term Associations​
+
 ### SNOMED
 
 [SNOMED International](https://www.snomed.org/) is a not-for-profit organization that owns, administers, and develops [SNOMED CT](https://snomedbrowser.org/?). SNOMED CT is a comprehensive, multilingual clinical healthcare terminology resource with scientifically validated clinical content, enabling consistent representation of clinical content in the electronic health records.
@@ -204,6 +212,14 @@ A relationship represents an association between two concepts. Relationships are
 
 Descriptions are the human readable terms that are associated with clinical ideas. Each description has a description type and may be marked "preferred for use" in particular languages or dialects. A fully specified name (FSN) is a type of description which uniquely and fully captures the meaning of the clinical idea. Synonyms are descriptions that allow the same concept to be expressed in different ways, each of which are associated with the same concept ID.
 
+![Screenshot of a SNOMEDCT search for diabetes mellitus displaying the resulting hieararchy and concept details. There are numbers calling attention to certain elements.](media/Ontology_SNOMED_CT)
+
+1. Search Box
+2. Search Results
+3. Concept Details: Other details about the term can be reviewed in these other tabs.
+4. Parents: Parent(s) noted here. Select the > next to the parent to view the Parent of the Parent term. The Parent is considered a node when envisioning this as a graph. The relationship, or edge, between these two nodes is that Diabetes Mellitus (disorder) is a type of Disorder of glucose metabolism (disorder). ​
+5. Children: Children listed here. Like the Parent, children are considered nodes when envisioning this as a graph and the edge, or relationship between them is that they are types of the Diabetes mellitus (disorder). ​
+
 ### UMLS
 
 The [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) is a collection of files and software developed by the National Library of Medicine that enables interoperability across biomedical computer systems. At its core, is the UMLS Metathesaurus, a large biomedical thesaurus organized by concept, which serves as a bridge connecting over [200 source vocabularies](https://www.nlm.nih.gov/research/umls/sourcereleasedocs/), including SNOMED CT, HPO, ICD-10, RxNORM, etc., by linking synonymous terms to shared concepts. This means a clinician's SNOMED CT code, and a geneticist's HPO term can be recognized as referring to the same underlying concept, allowing seamless traversal across vocabularies. The Metathesaurus preserves each vocabulary's original meanings, concept meanings and relationships while surfacing cross vocabulary connections through a unified concept identifier (CUI) system. The [UMLS Metathesaurus Browser](https://uts.nlm.nih.gov/uts/umls/home) is a web interface for searching and exploring these linked concepts and their relationships interactively.
@@ -214,7 +230,15 @@ If you have not already done so, you need to submit a license request to the UML
 3. Accepting the Terms & Conditions for the License Agreement
 4. Filling out the required fields on the License form
 
-You will receive an email once access has been granted.  
+You will receive an email once access has been granted. 
+
+![Screenshot of a UMLS search for diabetes mellitus displaying the resulting hieararchy and concept details. There are numbers calling attention to certain elements.](media/Ontology_UMLS)
+
+1. Definitions: View definitions and additional details by expanding this section. ​
+2. Related Concepts: View related concepts under that tab including alternative_of, answer_to, associated_condition_of, etc. The related concepts are edges, and the descriptor (alternative_of, etc.) are the properties. ​
+3. Cross References: Identifier numbers of this same term in SNOMEDCT_US and HPO.​
+4. Parents: Parent, or node, broader concepts.​
+5. Children: Children, or node, narrower concepts​.
 
 ### Knowledge Check: Existing Ontologies
 
