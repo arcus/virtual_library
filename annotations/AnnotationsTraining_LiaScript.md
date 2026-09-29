@@ -305,6 +305,147 @@ In conventional surveys, when the task is to answer a set of (multi-choice) ques
 
 </div>
 
+### Minimal Example for Inter-annotator Scoring
+
+Inter-annotator scoring measures the level of agreement between annotators labeling the same data. In an ideal world, we would expect 100% agreement. The equations in this section let us separate genuine agreement from agreement that would occur simply by chance.
+
+#### A Two-Annotator Binary Example
+
+Suppose you have a set of 10 clinical notes to be labeled for the presence of a disease. The labels are:
+
+* 0 – No indication of the disease
+* 1 – A positive indication of the disease
+
+Two annotators label the notes independently, giving the following results: 
+
+| Notes        | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| ------------ | - | - | - | - | - | - | - | - | - | -- |
+| Annotator 1  | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 1  |
+| Annotator 2  | 1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1  | 
+
+At a glance, the annotators disagree on 30% (3/10) of the notes and agree on the remaining 70% (7/10).
+
+However, raw agreement can be misleading. Cohen’s Kappa is a more robust measure because accounts for the possibility of agreement occurring by chance. It is defined as:
+
+$$
+ \kappa = \frac{p_0 - p_e}{1 - p_e}
+$$
+
+where $p_0$ is the relative observed agreement between raters (identical to accuracy), and $p_e$ the hypothetical probability of chance agreement. 
+
+**Step 1: Label probabilities for each annotator**
+
+Annotator 1:
+
+* $P(1) = 6/10 = 0.6$
+* $P(2) = 4/10 = 0.4$
+
+Annotator 2:
+
+* $P(1) = 5/10 = 0.5$
+* $P(2) = 5/10 = 0.5$
+
+**Step 2: Compute the kappa terms**
+
+Observed agreement: 
+
+$$
+ p_0 = 7/10 = 0.7
+$$
+
+Expected (chance) agreement: 
+
+$$
+ p_e = (0.6 * 0.5) + (0.4 + 0.5) = 0.3 + 0.2 = 0.5
+$$
+
+**Step 3: Compute Cohen's kappa**
+
+$$
+ \kappa = \frac{0.7 - 0.5}{1 - 0.5} = 0.4
+$$
+
+The result,  $\kappa$ = 0.4, indicates moderate agreement, which is noticeably lower than the 0.7 raw agreement, because chance alone would already produce agreement on half of the notes. 
+
+#### A Three-Annotator Binary Example
+
+Cohen’s kappa is defined for exactly two annotators. When three or more raters label the same items, we use Fleiss’ kappa. It follows the same overall structure (observed agreement corrected for chance), but the two terms are computed differently, because agreement is now measured per item across all raters rather than between a single pair. 
+Suppose a third annotator labels the same 10 notes as follows:
+
+| Notes        | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| ------------ | - | - | - | - | - | - | - | - | - | -- |
+| Annotator 1  | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 1  |
+| Annotator 2  | 1 | 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 1  | 
+| Annotator 3  | 1 | 1 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 1  |
+
+Fleiss’ kappa does not track which rater said what, it treats raters as interchangeable and only counts how many raters chose each label. The overall formula is: 
+
+$$
+ \kappa = \frac{\overline{P} - \overline{P}_e}{1 - \overline{P}_e}
+$$
+
+_Note: The bar over the $\overline{P}$ represents the average over the set of items._
+
+**Step 1: Count the labels per note**
+
+For each note, count how many of the $n$=3 raters assigned each category (0 or 1):
+
+| Notes                   | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| ----------------------- | - | - | - | - | - | - | - | - | - | -- |
+| n(0) - count of label 0 | 0 | 1 | 3 | 1 | 2 | 2 | 0 | 2 | 3 | 0  |
+| n(1) – count of label 1 | 3 | 2 | 0 | 2 | 1 | 1 | 3 | 1 | 0 | 3  | 
+
+**Step 2: Observed agreement per note**
+
+For each note $i$, the proportion of agreeing rater pairs is: 
+
+$$
+ P_i = \frac{(\sum{{{n_{ij}}^2}}) - n}{n^2 - n}
+$$
+
+For example: 
+
+$$
+ P_1 = \frac{(0^2 + 3^2) - 3}{3^2 - 3} = 1.0
+$$
+$$
+ P_2 = \frac{(1^2 + 2^2) - 3}{3^2 - 3} = 0.333
+$$
+$$
+ ...
+$$
+$$
+ P_{10} =  \frac{(0^2 + 3^2) - 3}{3^2 - 3} = 1.0
+$$
+
+The observed agreement $\overline{P}$ is the mean of the per-note values:
+
+$$
+ \overline{P} = \frac{P_1 + P_2 + {...} + P_{10}}{10} = 0.667
+$$
+
+**Step 3: Expected (chance) agreement**
+
+Pool all $n$ x $N$ = 30 labels and find overall proportion p_j in each category:
+
+* $p(0) = \frac{13}{30} = 0.467$
+* $p(1) = \frac{16}{30} = 0.533$
+
+The expected agreement is the sum of the squared proportions: 
+
+$$
+  \overline{P}_e = \sum{{p^2}_j} = 0.467^2+0.533^2 = 0.502
+$$
+
+**Step 4:  Compute Fleiss’ kappa**
+
+$$
+ \kappa = \frac{0.667-0.502}{1-0.502} = 0.33
+$$
+
+The result, $\kappa$ = 0.33, again indicates fair-to-moderate agreement once chance is removed. 
+
+
 
 ### During Annotation Checklist
 
