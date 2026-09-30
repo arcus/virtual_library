@@ -445,6 +445,116 @@ $$
 
 The result, $\kappa$ = 0.33, again indicates fair-to-moderate agreement once chance is removed. 
 
+#### Ordered Labels: Krippendorff’s Alpha
+
+So far, the labels have been treated as ordered, where any disagreement counts the same. But some labels have a natural order. Suppose two annotators now rate each note for disease severity on a three-point scale: 
+
+*	0 – mild
+*	1 – moderate
+*	2 – severe
+
+For this label set, a mild-vs-severe disagreement (0 vs 2) is a bigger error than mild-vs-moderate (0 vs 1). Plain kappa ignores this and focuses only on whether the labels match. Krippendorff’s alpha accounts for it by weighting disagreements according to how far apart the labels are, using a distance function chosen for the data type (ordinal, in this case). 
+
+Alpha is framed in terms of disagreements rather than agreement: 
+
+$$
+ \alpha = 1 - \frac{D_0}{D_e}
+$$
+
+where $D_0$ is the observed disagreement and $D_e$ is the disagreement expected by chance. Perfect agreement gives $D_0$ = 0 and $\alpha$ = 1, and chance-level agreement gives $\alpha$ = 0 where $\alpha$ can go negative when disagreement exceeds chance. 
+
+Consider the following severity ratings between two annotators: 
+
+| Notes        | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| ------------ | - | - | - | - | - | - | - | - | - | -- |
+| Annotator 1  | 0 | 1 | 2 | 1 | 0 | 2 | 1 | 0 | 1 | 2  |
+| Annotator 2  | 0 | 1 | 1 | 1 | 0 | 2 | 2 | 0 | 1 | 2  | 
+
+**Step 1: Build the coincidence matrix**
+
+Rather than counting items, alpha counts pairs of ratings. With two annotators, each note contributes one value pair (in both orders). Tallying every pair across the 10 notes gives a symmetric coincidence matrix o, whose entries record how often each label-pair co-occurs. The row/column are the overall label frequencies (each label appears: mild=6, moderate=8, severe=6, total=20 pairable values):  
+
+| $o$          | 0 (mild) | 1 (moderate) | 2 (severe) |
+| ------------ | -------- | ------------ | ---------- |
+| **0 (mild)**     | 6        | 0            | 0          |
+| **1 (moderate)** | 0        | 6            | 2          |
+| **2 (severe)**   | 0        | 2            | 4          |
+
+The diagonal (6, 6, 4) is agreement and the off diagonal are the two disagreements from notes (3, 7) counted in both orders.
+
+**Step 2: Apply the ordinal distance metric**
+
+The ordinal metric assigns a squared distance $\delta^2$ to each label pair, growing with separation so that 0 <- -> 2 is penalized more than adjacent disagreements.  For this dataset’s marginals, it works out to: 
+
+| $\delta^2$      | 0 (mild) | 1 (moderate) | 2 (severe) |
+| ------------ | -------- | ------------ | ---------- |
+| **0 (mild)**     | 0         | 49           | 196   |
+| **1 (moderate)** | 49        | 0            | 49    |
+| **2 (severe)**   | 196       | 49           | 0     |
+
+_Note that $\delta^2$ (mild,severe) = 196 roughly four times $\delta^2$  (mild,moderate) = 196. The ordinal metric makes a two-step error much costlier than a one-step error. A nominal metric would instead put 1 everywhere off the diagonal and the alpha would drop to 0.71._ 
+
+<div class = "behind-the-scenes">
+<b style="color: rgb(var(--color-highlight));">Where do 49 and 196 come from?</b><br>
+
+The ordinal distance is built from the marginal counts of the categories, which are the row/column totals of the coincidence matrix, written $n_v$. For this dataset: 
+
+| Category     | Marginal count ($n_v$) |
+| ------------ | --------   |
+| 0 (mild)     | $n_0$ = 6  |
+| 1 (moderate) | $n_1$ = 8  |
+| 2 (severe)   | $n_2$ = 6  |
+
+For two endpoints categories c and k (with c ≤ k), the squared distance sums the marginals across the interval, counting each endpoint half and any category between in full:
+
+$$
+ \delta^2(c,k) = \left( \sum_{v=c}^{k}{{n_v} - {{\frac{({n_c}+{n_k})}{2}}}} \right)^2
+$$
+
+Evaluated for each pair: 
+
+* $\delta^2$ (mild,moderate) = $\delta^2$ (0,1) = $(6+8- \frac{(6+8)}{2})^2 = 7^2$
+* $\delta^2$ (mild,severe) = $\delta^2$ (0,2) = $(6+8+6- \frac{(6+6)}{2})^2 = 14^2$
+* $\delta^2$ (mild,moderate) = $\delta^2$ (1,2) = $(8+6- \frac{(8+6)}{2})^2 = 7^2$
+
+The jump to 196 comes from the interior term: moderate’s full count of 8 sits inside the mild-severe interval, but for the adjacent pairs it is an endpoint and only counts half.  A densely used middle category pushes the extremes further apart, so the metric reflects the data’s actual distribution rather than assuming evenly spaced labels. 
+
+The two adjacent distances match only because mild and severe share the same count; different rates would separate them. 
+  
+</div>
+
+**Step 3: Compute observed and expected disagreement**
+
+Observed disagreement is the coincidence-weighted average distance (n=20 total pairs):
+
+$$
+D_o = \frac{1}{n}\sum{o_{vv'}\delta^2{_{vv'}}} = \frac{(2 * 49)+(2* 49)}{20} = \frac{196}{20} = 9.8
+$$
+
+Expected disagreement uses the label frequencies as if pairs were formed at random:
+
+$$
+D_e = \frac{1}{n(n-1)}\sum{{n_v}{n'_v}\delta^2{_{vv'}}} = \frac{1}{20 * 19}[(6*8*49*2)+(6*6*196*2)+(8*6*49*2)] = 61.89
+$$
+
+**Step 4: Compute alpha**
+
+$$
+\alpha = 1 - (\frac{9.8}{61.89}) = 0.84
+$$
+
+With ordinal weight, $/alpha$ = 0.84, indicates good reliability, higher than the nominal result (=.71), for the same data, because the two disagreements are only one severity step apart, and the ordinal metric rightly treats them as minor. 
+
+#### Choosing a Coefficient
+
+The following tables describes when to use what metric for calculating Inter-annotator Scores: 
+
+
+| Coefficient          | Raters    | Categories | Ordered / Weighted labels | Missing data |
+| -------------------- | ----------| -----------| ------------------------- | ------------ |
+| Cohen’s kappa        | Exactly 2 | 2 or more  | No (use weighted kappa)   | Not handled  |
+| Fleiss’ kappa        | 3 or more | 2 or more  | No                        | Not handled  |
+| Krippendorff’s alpha | 2 or more | 2 or more  | Yes                    | Handled natively|
 
 
 ### During Annotation Checklist
