@@ -305,7 +305,7 @@ In conventional surveys, when the task is to answer a set of (multi-choice) ques
 
 </div>
 
-### Minimal Example for Inter-annotator Scoring
+### Calculations for Inter-Annotator Scoring
 
 Inter-annotator scoring measures the level of agreement between annotators labeling the same data. In an ideal world, we would expect 100% agreement. The equations in this section let us separate genuine agreement from agreement that would occur simply by chance.
 
