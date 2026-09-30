@@ -381,10 +381,10 @@ Suppose a third annotator labels the same 10 notes as follows:
 Fleiss’ kappa does not track which rater said what, it treats raters as interchangeable and only counts how many raters chose each label. The overall formula is: 
 
 $$
- \kappa = \frac{\overline{P} - \overline{P}_e}{1 - \overline{P}_e}
+ \kappa = \frac{\bar{P} - \bar{P}_e}{1 - \bar{P}_e}
 $$
 
-_Note: The bar over the $\overline{P}$ represents the average over the set of items._
+_Note: The bar over the $\bar{P}$ represents the average over the set of items._
 
 **Step 1: Count the labels per note**
 
@@ -418,10 +418,10 @@ $$
  P_{10} =  \frac{(0^2 + 3^2) - 3}{3^2 - 3} = 1.0
 $$
 
-The observed agreement $\overline{P}$ is the mean of the per-note values:
+The observed agreement $\bar{P}$ is the mean of the per-note values:
 
 $$
- \overline{P} = \frac{P_1 + P_2 + {...} + P_{10}}{10} = 0.667
+ \bar{P} = \frac{P_1 + P_2 + {...} + P_{10}}{10} = 0.667
 $$
 
 **Step 3: Expected (chance) agreement**
@@ -434,7 +434,7 @@ Pool all $n$ x $N$ = 30 labels and find overall proportion p_j in each category:
 The expected agreement is the sum of the squared proportions: 
 
 $$
-  \overline{P}_e = \sum{{p^2}_j} = 0.467^2+0.533^2 = 0.502
+  \bar{P}_e = \sum{{p^2}_j} = 0.467^2+0.533^2 = 0.502
 $$
 
 **Step 4:  Compute Fleiss’ kappa**
@@ -540,7 +540,7 @@ $$
 **Step 4: Compute alpha**
 
 $$
-\alpha = 1 - (\frac{9.8}{61.89}) = 0.84
+\alpha = 1 - \left(\frac{9.8}{61.89}\right) = 0.84
 $$
 
 With ordinal weight, $/alpha$ = 0.84, indicates good reliability, higher than the nominal result (=.71), for the same data, because the two disagreements are only one severity step apart, and the ordinal metric rightly treats them as minor. 
