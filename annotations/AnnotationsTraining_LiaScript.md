@@ -325,7 +325,7 @@ Two annotators label the notes independently, giving the following results:
 
 At a glance, the annotators disagree on 30% (3/10) of the notes and agree on the remaining 70% (7/10).
 
-However, raw agreement can be misleading. Cohen’s Kappa is a more robust measure because accounts for the possibility of agreement occurring by chance. It is defined as:
+However, raw agreement can be misleading. Cohen’s Kappa is a more robust measure because it accounts for the possibility of agreement occurring by chance. It is defined as:
 
 $$
  \kappa = \frac{p_0 - p_e}{1 - p_e}
@@ -480,7 +480,7 @@ Rather than counting items, alpha counts pairs of ratings. With two annotators, 
 | **1 (moderate)** | 0        | 6            | 2          |
 | **2 (severe)**   | 0        | 2            | 4          |
 
-The diagonal (6, 6, 4) is agreement and the off diagonal are the two disagreements from notes (3, 7) counted in both orders.
+The diagonal (6, 6, 4) is agreement and the off diagonal are the two disagreements from notes 3 and 7 counted in both orders.
 
 **Step 2: Apply the ordinal distance metric**
 
@@ -492,7 +492,7 @@ The ordinal metric assigns a squared distance $\delta^2$ to each label pair, gro
 | **1 (moderate)** | 49        | 0            | 49    |
 | **2 (severe)**   | 196       | 49           | 0     |
 
-_Note that $\delta^2$ (mild,severe) = 196 roughly four times $\delta^2$  (mild,moderate) = 196. The ordinal metric makes a two-step error much costlier than a one-step error. A nominal metric would instead put 1 everywhere off the diagonal and the alpha would drop to 0.71._ 
+_Note that $\delta^2$ (mild,severe) = 196 roughly four times $\delta^2$  (mild,moderate) = 49. The ordinal metric makes a two-step error much costlier than a one-step error. A nominal metric would instead put 1 everywhere off the diagonal and the alpha would drop to 0.71._ 
 
 <div class = "behind-the-scenes">
 <b style="color: rgb(var(--color-highlight));">Where do 49 and 196 come from?</b><br>
@@ -513,9 +513,9 @@ $$
 
 Evaluated for each pair: 
 
-* $\delta^2$ (mild,moderate) = $\delta^2$ (0,1) = $(6+8- \frac{(6+8)}{2})^2 = 7^2$
-* $\delta^2$ (mild,severe) = $\delta^2$ (0,2) = $(6+8+6- \frac{(6+6)}{2})^2 = 14^2$
-* $\delta^2$ (mild,moderate) = $\delta^2$ (1,2) = $(8+6- \frac{(8+6)}{2})^2 = 7^2$
+* $\delta^2$ (mild,moderate) = $\delta^2$ (0,1) = $\left(6+8- \frac{(6+8)}{2}\right)^2 = 7^2$
+* $\delta^2$ (mild,severe) = $\delta^2$ (0,2) = $\left(6+8+6- \frac{(6+6)}{2}\right)^2 = 14^2$
+* $\delta^2$ (moderate,severe) = $\delta^2$ (1,2) = $\left(8+6- \frac{(8+6)}{2}\right)^2 = 7^2$
 
 The jump to 196 comes from the interior term: moderate’s full count of 8 sits inside the mild-severe interval, but for the adjacent pairs it is an endpoint and only counts half.  A densely used middle category pushes the extremes further apart, so the metric reflects the data’s actual distribution rather than assuming evenly spaced labels. 
 
@@ -543,7 +543,7 @@ $$
 \alpha = 1 - \left(\frac{9.8}{61.89}\right) = 0.84
 $$
 
-With ordinal weight, $/alpha$ = 0.84, indicates good reliability, higher than the nominal result (=.71), for the same data, because the two disagreements are only one severity step apart, and the ordinal metric rightly treats them as minor. 
+With ordinal weight, $\alpha$ = 0.84, indicates good reliability, higher than the nominal result (=.71), for the same data, because the two disagreements are only one severity step apart, and the ordinal metric rightly treats them as minor. 
 
 #### Choosing a Coefficient
 
