@@ -337,26 +337,26 @@ where $p_0$ is the relative observed agreement between raters (identical to accu
 
 Annotator 1:
 
-* $P(1) = 6/10 = 0.6$
-* $P(2) = 4/10 = 0.4$
+* $P(1) = \frac{6}{10} = 0.6$
+* $P(2) = \frac{4}{10}= 0.4$
 
 Annotator 2:
 
-* $P(1) = 5/10 = 0.5$
-* $P(2) = 5/10 = 0.5$
+* $P(1) = \frac{5}{10} = 0.5$
+* $P(2) = \frac{5}{10} = 0.5$
 
 **Step 2: Compute the kappa terms**
 
 Observed agreement: 
 
 $$
- p_0 = 7/10 = 0.7
+ p_0 = \frac{7}{10} = 0.7
 $$
 
 Expected (chance) agreement: 
 
 $$
- p_e = (0.6 * 0.5) + (0.4 + 0.5) = 0.3 + 0.2 = 0.5
+ p_e = (0.6 * 0.5) + (0.4 * 0.5) = 0.3 + 0.2 = 0.5
 $$
 
 **Step 3: Compute Cohen's kappa**
@@ -426,7 +426,7 @@ $$
 
 **Step 3: Expected (chance) agreement**
 
-Pool all $n$ x $N$ = 30 labels and find overall proportion p_j in each category:
+Pool all $n$ x $N$ = 30 labels and find overall proportion $p_j$ in each category:
 
 * $p(0) = \frac{13}{30} = 0.467$
 * $p(1) = \frac{16}{30} = 0.533$
