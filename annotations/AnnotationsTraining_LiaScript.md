@@ -428,7 +428,7 @@ $$
 
 Pool all $n$ x $N$ = 30 labels and find overall proportion $p_j$ in each category:
 
-* $p(0) = \frac{13}{30} = 0.467$
+* $p(0) = \frac{14}{30} = 0.467$
 * $p(1) = \frac{16}{30} = 0.533$
 
 The expected agreement is the sum of the squared proportions: 
@@ -676,7 +676,79 @@ Due to the kappa paradox, annotators may appear to agree frequently while still 
 
 </div>
 
-***  
+***
+
+For the final two questions, please consider the scenario below: 
+
+A set of 12 clinical notes are being examined for the presence of a specific symptom. The following table represents the labeling of 4 annotators, in which `0` indicates no indication of the symptom in the note and `1` indicates presence of the symptom: 
+
+| Notes        | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
+| ------------ | - | - | - | - | - | - | - | - | - | -- | -- | -- |
+| Annotator 1  | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 1  | 1  | 0  |
+| Annotator 2  | 0 | 1 | 0 | 0 | 1 | 1 | 0 | 0 | 1 | 1  | 1  | 0  |
+| Annotator 3  | 0 | 1 | 1 | 0 | 1 | 1 | 0 | 1 | 1 | 1  | 0  | 0  |
+| Annotator 4  | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 1  | 1  | 0  |
+
+13. Which metric is the appropriate choice for calculating the inter-annotator agreement in this scenario? 
+
+[( )] A. Cohen’s kappa  
+[(X)] B. Fleiss’ kappa  
+[( )] C. Krippendorff’s alpha
+[( )] D. F1 score
+***
+
+<div class = "answer">
+
+Because this scenario involves binary un-ordered labeling with more than two annotators, the appropriate metric is Fleiss' kappa. 
+
+</div>
+
+***
+
+14. What is the IAA score, using the metric you selected in the previous question? Please only include the number to two decimal places. 
+
+[[0.44]]
+<script>
+let input = "@input".trim()
+
+input == "0.44"
+</script>
+***
+
+<div class = "answer">
+
+Using the calculation for [Fleiss' kappa](#a-three-annotator-binary-example):
+
+$$
+ P_1 = \frac{(4^2 + 0^2) - 4}{4^2 - 4} = 1.0
+$$
+
+$P_2$ to $P_12$ can be calculated in a similar way and then used to calculate $\bar{P}$:
+
+$$
+ \bar{P} = \frac{P_1 + P_2 + {...} + P_{12}}{12} = 0.722
+$$
+
+Next, calculate the proportions of each label to the total number of annotations and use them to get the expected agreement:  
+
+* $p(0) = \frac{26}{48} = 0.542$
+* $p(1) = \frac{22}{48} = 0.458$
+
+$$
+  \bar{P}_e = \sum{{p^2}_j} = 0.542^2+0.458^2 = 0.504
+$$
+
+Now you can calculate kappa:
+
+$$
+ \kappa = \frac{0.722-0.504}{1-0.504} = 0.44
+$$
+
+</div>
+
+***
+
+
 
 ## Best Practices: Post-Annotation
 
