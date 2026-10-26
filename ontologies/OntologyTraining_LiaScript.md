@@ -244,6 +244,8 @@ This approach reduces duplicate annotation and demonstrates how a focused, stand
 
 ![Project 1 produces gold-standard annotations for machine-learning development. Mapping symptom and severity labels to HPO creates standardized, reusable representations that can support future studies. A subsequent project can reuse applicable HPO-based annotations and annotate only additional concepts required to address a new research question, such as attribution of symptoms to chemotherapy toxicity, infection, or mixed etiologies.](media/Ontology_Projects.png)
 
+_Figure 3: Project 1 produces gold-standard annotations for machine-learning development. Mapping symptom and severity labels to HPO creates standardized, reusable representations that can support future studies. A subsequent project can reuse applicable HPO-based annotations and annotate only additional concepts required to address a new research question, such as attribution of symptoms to chemotherapy toxicity, infection, or mixed etiologies._
+
 **Conclusion**
 
 This case study demonstrates how a focused annotation ontology can support the creation of a high-quality, reusable dataset from free-text pediatric oncology notes. For Project 1, defining chemotherapy-related symptomatic adverse effects with clear annotation guidelines and mapping applicable symptom and severity concepts to HPO supports consistent gold-standard annotation for machine-learning development. 
