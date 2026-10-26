@@ -196,6 +196,62 @@ The HPO currently contains over 18,000 terms arranged in a directed acyclic grap
 4. **Cross References:** Identifier numbers of this same term in SNOMEDCT_US and UMLS.
 5. **Term Associations**​
 
+#### Case Study
+
+**An HPO-Based Ontology for Chemotherapy Adverse Events**
+
+A pediatric oncology lab needs to accurately track adverse symptomatic side effects of chemotherapy that are recorded only in free-text clinical notes. To support a machine-learning project, the team developed a focused annotation ontology and used it to create a gold-standard dataset. They defined the project as: 
+
+>**Project 1:** Develop a gold-standard annotated dataset from pediatric oncology clinical notes to identify and characterize chemotherapy-related symptomatic adverse effects, including symptom type, severity, diagnosis, treatment actions, and temporal context, for machine-learning model development.  
+
+Within the ontology, **symptoms** and **severity** are mapped to Human Phenotype Ontology (HPO) terms. Mapping these labels to HPO provides standardized definitions and enables additional analyses using HPO’s hierarchical structure and related concepts. **Diagnosis**, **treatment actions**, and **temporal information** are represented using project-defined vocabulary. 
+
+**Ontology Structure**
+
+For this clinical problem, the team organized the annotation schema into the five branches, where Symptom and Severity represent phenotypic concepts and are mapped to HPO.
+
+![The chemotherapy adverse event ontology includes five annotation branches. Two of the five labels, Symptom and Severity, are mapped to HPO terms.](media/Ontology_Chemotherapy.png)
+
+_Figure 1: The chemotherapy adverse event ontology includes five annotation branches. Two of the five labels, Symptom and Severity, are mapped to HPO terms._
+
+The following table identifies the HPO mappings for the symptom and severity labels. 
+
+![Table identifying the HPO mappings for the symptom and serverity labels.](media/Ontology_HPOMappings.png)
+
+**Added Value of HPO Mapping**
+
+Mapping labels to HPO codes adds semantic context beyond the original annotation categories. HPO’s hierarchical structure enables researchers to examine specific phenotypes in relation to broader parent concepts and more granular child concepts. For example, individual symptoms can be aggregated into broader phenotype categories to evaluate overall patterns of gastrointestinal, neurologic, mucosal, or constitutional toxicity. 
+
+This structure supports exploratory analyses such as phenotype-frequency comparisons, symptom co-occurrence analysis, patient or treatment-episode similarity analysis, cohort identification, and cross-study comparison. When combined with temporal and treatment-context annotations, HPO-mapped symptoms can also support analyses of toxicity patterns across chemotherapy regimens, treatment phases, and patient populations. 
+
+![Neighborhood view of selected HPO terms used to represent severity-related or symptom-related annotations. Parent and child relationships can support phenotype aggregation, comparison, and exploration across levels of clinical specificity.](media/Ontology_Severity.png)
+
+_Figure 2: Neighborhood view of selected HPO terms used to represent severity-related or symptom-related annotations. Parent and child relationships can support phenotype aggregation, comparison, and exploration across levels of clinical specificity._
+
+**Discussion**
+
+A well-defined annotation ontology is essential for producing clinical datasets that are reproducible, interpretable, and reusable. In Project 1, structured annotation of chemotherapy-related symptomatic adverse effects, combined with mapping symptom and severity labels to Human Phenotype Ontology (HPO) terms, creates a high-quality gold-standard dataset for machine-learning development. 
+
+The use of standardized HPO concepts extends the value of the dataset beyond its original purpose. HPO-coded symptom and severity annotations can support phenotype-based cohort identification, cross-study comparison, analyses of chemotherapy-associated symptom patterns, and future machine-learning applications without requiring the same concepts to be reannotated from the clinical notes. Project-defined labels, including diagnoses, treatment actions, and temporal context, can also be reused when their definitions align with the needs of a future study.
+
+**Potential Reuse in Future Research**
+
+The Project 1 dataset can serve as a foundation for subsequent studies. For example, an attribution-focused project could reuse existing HPO-based symptom and severity annotations while adding contextual information needed to distinguish chemotherapy toxicity from infection or mixed etiologies. These additional annotations may include neutropenia, microbiology findings, clinician attribution, infection status, and antimicrobial treatment. 
+
+>**Project 2:** Develop and validate an attribution-focused ontology for differentiating chemotherapy-related symptomatic adverse effects from overlapping infectious and treatment-related conditions in pediatric oncology clinical notes. 
+
+This approach reduces duplicate annotation and demonstrates how a focused, standards-based ontology can support both the immediate machine-learning objectives of Project 1 and future research questions. 
+
+![Project 1 produces gold-standard annotations for machine-learning development. Mapping symptom and severity labels to HPO creates standardized, reusable representations that can support future studies. A subsequent project can reuse applicable HPO-based annotations and annotate only additional concepts required to address a new research question, such as attribution of symptoms to chemotherapy toxicity, infection, or mixed etiologies.](media/Ontology_Projects.png)
+
+**Conclusion**
+
+This case study demonstrates how a focused annotation ontology can support the creation of a high-quality, reusable dataset from free-text pediatric oncology notes. For Project 1, defining chemotherapy-related symptomatic adverse effects with clear annotation guidelines and mapping applicable symptom and severity concepts to HPO supports consistent gold-standard annotation for machine-learning development. 
+
+HPO mapping also increases the long-term value of the dataset by providing standardized, computable phenotype representations. The resulting annotations can support future analyses, including phenotype-based cohort identification, symptom-pattern analysis, cross-study comparison, and related research projects, while reducing the need to reannotate concepts that have already been captured. 
+
+Overall, combining project-specific contextual labels with standardized HPO terms provides a practical approach for addressing the immediate goals of Project 1 while creating a foundation for future pediatric oncology research. 
+
 ### SNOMED
 
 [SNOMED International](https://www.snomed.org/) is a not-for-profit organization that owns, administers, and develops [SNOMED CT](https://snomedbrowser.org/?). SNOMED CT is a comprehensive, multilingual clinical healthcare terminology resource with scientifically validated clinical content, enabling consistent representation of clinical content in the electronic health records.
