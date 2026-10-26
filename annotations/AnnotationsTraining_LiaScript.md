@@ -824,6 +824,19 @@ As part of the [Arcus Annotation Initiative](https://forum.arcus.chop.edu/t/arcu
 - Accelerate AI and Machine Learning research across CHOP.
 - Enable multimodal research by combining different types of annotated data.
 
+<div class = "important">
+<b style="color: rgb(var(--color-highlight));">Special Note</b><br>
+
+For projects performing annotation within an Arcus Lab with Arcus Data Science (ADS) team support, study teams are encouraged to engage with the Arcus Library Science team to explore opportunities for contributing their annotated data and associated artifacts to the Arcus Annotation Initiative as reusable research resources. 
+
+Study teams interested in making their annotated data available for future research use are also encouraged to engage with the Institutional Review Board (IRB) early in the study planning process. Early consultation can help ensure that research protocols and informed consent language appropriately address potential secondary use and data sharing while identifying any privacy, ethical, or regulatory considerations that may affect future reuse. 
+
+When appropriate, the Arcus Library Science team will collaborate with the study team and relevant Arcus partners to review the research protocol, consent language, and applicable governance requirements; determine appropriate conditions for reuse; support documentation of the annotated dataset and associated artifacts; and facilitate completion of an Annotation Card. 
+
+Annotated data and associated resources determined to be eligible for contribution may then be made discoverable and available for appropriate reuse by CHOP researchers within the Arcus environment, consistent with applicable institutional policies, permissions, and data-sharing restrictions.
+
+</div> 
+
 ### Post-Annotation Checklist
 
 - [ ] Final dataset quality score and select metric documented
