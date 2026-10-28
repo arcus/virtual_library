@@ -79,9 +79,7 @@ A knowledge graph can capture taxonomies using nodes and relationships that repr
 
 The "Generic Ontology Chart" seen on the **What is an Ontology?** page is an example of an ontology being represented as a knowledge graph. Here is another example of a knowledge graph: 
 
-![Example Diagram of a Knowledge Graph](media/Ontology_KnowledgeGraph.png)
-
-_A knowledge graph captures instance data as nodes, relationships, and properties, while using taxonomies and ontologies as organizing principles._
+![Example Diagram of a Knowledge Graph](media/Ontology_KnowledgeGraph.png "_A knowledge graph captures instance data as nodes, relationships, and properties, while using taxonomies and ontologies as organizing principles._")
 
 ### Why Ontology and Not Taxonomy
 
@@ -210,9 +208,7 @@ Within the ontology, **symptoms** and **severity** are mapped to Human Phenotype
 
 For this clinical problem, the team organized the annotation schema into the five branches, where Symptom and Severity represent phenotypic concepts and are mapped to HPO.
 
-![The chemotherapy adverse event ontology includes five annotation branches. Two of the five labels, Symptom and Severity, are mapped to HPO terms.](media/Ontology_Chemotherapy.png)
-
-_Figure 1: The chemotherapy adverse event ontology includes five annotation branches. Two of the five labels, Symptom and Severity, are mapped to HPO terms._
+![The chemotherapy adverse event ontology includes five annotation branches. Two of the five labels, Symptom and Severity, are mapped to HPO terms.](media/Ontology_Chemotherapy.png "_Figure 1: The chemotherapy adverse event ontology includes five annotation branches. Two of the five labels, Symptom and Severity, are mapped to HPO terms._")
 
 The following table identifies the HPO mappings for the symptom and severity labels. 
 
@@ -224,9 +220,10 @@ Mapping labels to HPO codes adds semantic context beyond the original annotation
 
 This structure supports exploratory analyses such as phenotype-frequency comparisons, symptom co-occurrence analysis, patient or treatment-episode similarity analysis, cohort identification, and cross-study comparison. When combined with temporal and treatment-context annotations, HPO-mapped symptoms can also support analyses of toxicity patterns across chemotherapy regimens, treatment phases, and patient populations. 
 
-![Neighborhood view of selected HPO terms used to represent severity-related or symptom-related annotations. Parent and child relationships can support phenotype aggregation, comparison, and exploration across levels of clinical specificity.](media/Ontology_Severity.png)
-
-_Figure 2: Neighborhood view of selected HPO terms used to represent severity-related or symptom-related annotations. Parent and child relationships can support phenotype aggregation, comparison, and exploration across levels of clinical specificity._
+<figure>
+	<img src="media/Ontology_Severity.png" style="width: 65%; margin-right: 4%; display: inline-block; vertical-align: top;" alt="Neighborhood view of selected HPO terms used to represent severity-related or symptom-related annotations. Parent and child relationships can support phenotype aggregation, comparison, and exploration across levels of clinical specificity." />
+	<figcaption>_Figure 2: Neighborhood view of selected HPO terms used to represent severity-related or symptom-related annotations. Parent and child relationships can support phenotype aggregation, comparison, and exploration across levels of clinical specificity._</figcaption>
+</figure>
 
 **Discussion**
 
@@ -242,9 +239,7 @@ The Project 1 dataset can serve as a foundation for subsequent studies. For exam
 
 This approach reduces duplicate annotation and demonstrates how a focused, standards-based ontology can support both the immediate machine-learning objectives of Project 1 and future research questions. 
 
-![Project 1 produces gold-standard annotations for machine-learning development. Mapping symptom and severity labels to HPO creates standardized, reusable representations that can support future studies. A subsequent project can reuse applicable HPO-based annotations and annotate only additional concepts required to address a new research question, such as attribution of symptoms to chemotherapy toxicity, infection, or mixed etiologies.](media/Ontology_Projects.png)
-
-_Figure 3: Project 1 produces gold-standard annotations for machine-learning development. Mapping symptom and severity labels to HPO creates standardized, reusable representations that can support future studies. A subsequent project can reuse applicable HPO-based annotations and annotate only additional concepts required to address a new research question, such as attribution of symptoms to chemotherapy toxicity, infection, or mixed etiologies._
+![Project 1 produces gold-standard annotations for machine-learning development. Mapping symptom and severity labels to HPO creates standardized, reusable representations that can support future studies. A subsequent project can reuse applicable HPO-based annotations and annotate only additional concepts required to address a new research question, such as attribution of symptoms to chemotherapy toxicity, infection, or mixed etiologies.](media/Ontology_Projects.png "_Figure 3: Project 1 produces gold-standard annotations for machine-learning development. Mapping symptom and severity labels to HPO creates standardized, reusable representations that can support future studies. A subsequent project can reuse applicable HPO-based annotations and annotate only additional concepts required to address a new research question, such as attribution of symptoms to chemotherapy toxicity, infection, or mixed etiologies._")
 
 **Conclusion**
 
