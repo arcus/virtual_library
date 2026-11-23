@@ -52,22 +52,14 @@ Research centers, clinics, and colleges and universities will have a dedicated s
 
 If REDCap is offered by your organization (your university or workplace), questions about how to use it effectively or solve problems like the site being down should go to the people at your institution responsible for REDCap.  Sometimes, an institution will have a big staff dedicated to REDCap, people who can offer all kinds of services like helping you design instruments and manage your data with a lot of support.  Other institutions have only one administrator who keeps the REDCap site running and up to date but isn't responsible for helping users figure out how to use REDCap.  Most institutions are somewhere in the middle.
 
-Not sure whether your institution has REDCap?  You may find your institution in the [list of partners](https://projectredcap.org/partners/).  For example, here are a list of partners that start with the letter "A," plus a couple of oddball entries at the top of the alphabetical list.  Each partner then has contacts listed with their email addresses (simply click "View Collaborators"), so you can reach out and ask to get more information.
-
-![An alphabetical list of institutions with a few "A" entries shown.](media/redcap_partners.png)<!-- style = "border : 1px solid rgb(var(--color-highlight)); max-width: 500px;"-->
-
-<div class = "learn-more">
-<b style="color: rgb(var(--color-highlight));">Learning connection</b><br>
-
-Although these materials are intended for any researcher who finds them useful, we know the institutional affiliation of some of our users, so for your convenience we're adding some of the REDCap URLs that might be useful to you.  Want us to add your institution's REDCap link, so that this training is more useful for your peers, too?  Email us at [`dart@chop.edu`](mailto:dart@chop.edu).
+Not sure whether your institution has REDCap? If you work at CHOP, Penn, or Drexel, you definitely do: 
 
 * Children's Hospital of Philadelphia: https://redcap.chop.edu/
 * Drexel Med: https://redcap.drexelmed.edu
 * Penn Medicine: https://redcap.med.upenn.edu
 * Penn Nursing: https://redcap.nursing.upenn.edu
-* University of Botswana: https://ehealth.ub.bw/redcap
 
-</div>
+If you are curious about another institution, reach out to their IT staff and they will be able to let you know.
 
 ## About APIs
 
