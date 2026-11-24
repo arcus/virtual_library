@@ -52,7 +52,7 @@ Research centers, clinics, and colleges and universities will have a dedicated s
 
 If REDCap is offered by your organization (your university or workplace), questions about how to use it effectively or solve problems like the site being down should go to the people at your institution responsible for REDCap.  Sometimes, an institution will have a big staff dedicated to REDCap, people who can offer all kinds of services like helping you design instruments and manage your data with a lot of support.  Other institutions have only one administrator who keeps the REDCap site running and up to date but isn't responsible for helping users figure out how to use REDCap.  Most institutions are somewhere in the middle.
 
-Not sure whether your institution has REDCap? If you work at CHOP, Penn, or Drexel, you definitely do: 
+Not sure whether your institution has REDCap? If you work at CHOP, Penn, or Drexel, you do: 
 
 * Children's Hospital of Philadelphia: https://redcap.chop.edu/
 * Drexel Med: https://redcap.drexelmed.edu
@@ -151,11 +151,11 @@ A better approach is to use a script that uses an API call. First of all, it's s
 
 What does "API" stand for?
 
-[[ ]] Application Private Interface
-[[ ]] Android Programming Interface
-[[X]] Application Programming Interface
-[[ ]] Application Programming Interchange
-[[ ]] Anonymous Programming Interface
+[( )] Application Private Interface
+[( )] Android Programming Interface
+[(X)] Application Programming Interface
+[( )] Application Programming Interchange
+[( )] Anonymous Programming Interface
 ***************
 
 <div class = "answer">
@@ -185,9 +185,9 @@ APIs have multiple advantages related to data freshness and reproducibility.  AP
 
 **************
 
-## Hands-On Practice: Setup
+## Using the API: Setup
 
-For the next part of this module, we'd like you to work with a real REDCap database that you create or in which you have User Rights (a very high level of privilege that you may not have on projects you didn't create).
+In this section, you'll learn how to enable API access in a REDCap database that you create or in which you have User Rights (a very high level of privilege that you may not have on projects you didn't create).
 
 ![List of applications which includes the "User Rights" application.](media/user_rights.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
@@ -196,13 +196,13 @@ If you have a REDCap project in mind, log in and open that project.  On the left
 <div class = "warning">
 <b style="color: rgb(var(--color-highlight));">Warning!</b><br>
 
-Just because we're not going to break any of your data doesn't mean that it's okay from a regulatory perspective to use the API to download data to your computer.  Think about whether the use of this data is governed by a protocol or data use agreement, and whether your computer is an approved place to do analysis of the data.  
+Just because we're not going to break any of your data doesn't mean that it's okay from a regulatory perspective to use the API to download data to your computer. Consider whether the use of this data is governed by a protocol or data use agreement, and whether your computer is an approved place to do analysis of the data.  
 
 </div>
 
-If you can't or don't want to use your own existing REDCap project, you can clone a sample project from us.  We've taken data from the University of California, Irvine Machine Learning Repository, specifically, their dataset on [cervical cancer risk factors](https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29), and made that data into a REDCap project.  Here are the steps to take our REDCap project and make it yours!
+If you can't or don't want to use your own existing REDCap project, you can simply read through the steps, or you can clone a sample project included in this module.  The sample data have been taken data from the University of California, Irvine Machine Learning Repository, specifically, their dataset on [cervical cancer risk factors](https://archive.ics.uci.edu/ml/datasets/Cervical+cancer+%28Risk+Factors%29), and made that data into a REDCap project. Here are the steps to create a REDCap project using this data: 
 
-1. Download our [REDCap xml file](media/cervical_cancer_factors.REDCap.xml), saving it to a place you'll be able to find it (like your Downloads folder).  We suggest doing a right click on the link and choosing **Save Link As,** or **Download Linked File As.**
+1. Download this [REDCap xml file](media/cervical_cancer_factors.REDCap.xml), saving it to a place you'll be able to find it (like your Downloads folder).  We suggest doing a right click on the link and choosing **Save Link As,** or **Download Linked File As.**
 2. Log in to your REDCap server and choose **New Project.**
 3. Fill out the Project title, Project purpose, Assign project to Folder, and Project notes fields as you like.  We called our project "API Testing" but that's only a suggestion.
 4. Choose **Upload a REDCap project XML file** as the Project Creation option.  
@@ -214,11 +214,11 @@ An image below shows what you might see after steps 1-5, although your instituti
 
 6. At the bottom of the page, click **Create Project.**  It may take a few minutes to digest that giant XML file!
 
-Congratulations, now you have a project that you created, which means you have User Rights capabilities.  That will come in handy in our next step!
+Congratulations, now you have a project that you created, which means you have User Rights capabilities. That will come in handy in the next step.
 
 ### Enabling the API
 
-In REDCap, the project owner (or people with user rights) have to explicitly give permission to use the REDCap API to project users who need that capability. In fact, when you create a new REDCap project, REDCap does not provide you with these permissions by default, even though you're the project owner! Take a look at your REDCap project and look on the left hand side of the screen to look at the menu of options. Chances are, you won't see anything that says "API." If that's the case, don't worry. We're going to walk you through how to give yourself API access.
+In REDCap, the project owner (or people with user rights) have to explicitly give permission to use the REDCap API to project users who need that capability. In fact, when you create a new REDCap project, REDCap does not provide you with these permissions by default, even though you're the project owner! Take a look at your REDCap project and look on the left hand side of the screen to look at the menu of options. Chances are, you won't see anything that says "API." The next steps will walk you through how to give yourself API access.
 
 Open your REDCap database (one that belongs to you or in which you have the ability to change user rights). In the left side of the screen, choose **User Rights** from the list of applications.
 
@@ -228,7 +228,7 @@ The User Rights panel will open in the main part of your screen. Click on your u
 
 ![List of user rights checkboxes with API Export checked.](media/api_export.png)<!-- style = "border :1px solid rgb(var(--color-highlight));" -->
 
-**The next step depends on your version of REDCap.**  Do you see a box on the right side of your User Rights panel labeled **Privileges for Viewing and Exporting Data**?  If you do, give yourself some Data Export Rights.  We recommend **Full Data Set**, but you can choose a less privileged level of access if you're working with identified data and want to be extra careful.  Note that our sample project on cervical cancer risk factors is already deidentified.
+**The next step depends on your version of REDCap.**  Do you see a box on the right side of your User Rights panel labeled **Privileges for Viewing and Exporting Data**?  If you do, give yourself some Data Export Rights.  We recommend **Full Data Set**, but you can choose a less privileged level of access if you're working with identified data and want to be extra careful.  Note that our sample project on cervical cancer risk factors is already de-identified.
 
 This is what we're talking about:
 
@@ -275,7 +275,7 @@ You can generate a REDCap API token once you have been given API rights.  Once y
 
 **************
 
-## Hands on Practice: API Playground
+## Using the API: API Playground
 
 So, you have some data in a REDCap database, and you have an API key that gives you access to that data. How do you use this key, though? Learning how to use an API can be tricky, because it requires you to pass not only the key, but your actual request like "give me only the field called `species`" or "give me only the form called `inclusion_criteria`." Luckily, REDCap provides you an **API Playground** that gives you not only a view into what the API can do, but provides a good start to giving you the actual code. Let's take a deeper look.
 
@@ -294,8 +294,8 @@ In your REDCap project, head over to the **API Playground** – click on that ph
 
 For now, choose **Export Records** as the API method.  This will allow you to download records (rows of data).  Make sure that:
 
-* The "Format" (second option down) is "CSV" and
-* The "Type" (third option down) is "flat."
+* The "Format" is "CSV" and
+* The "Type" is "flat."
 
 You don't have to change any other fields.  Leaving everything else alone means you'll download all the records (rows) and all of the forms / instruments with all of their fields (columns) into a single .csv file.
 
@@ -352,7 +352,10 @@ In the tabs at the bottom of the API Playground, you'll see names of programming
 
 We'll show you how to use Python and R in two separate sections, so you can feel free to look at either one, or both!
 
-## Python and the REDCap API
+## REDCap API in Python and R
+
+Python
+-----
 
 <div class = "options">
 <b style="color: rgb(var(--color-highlight));">Another option</b><br>
@@ -382,7 +385,8 @@ Below, this is the result when we do that for our cervical cancer data database:
 
 Now, your data is in a pandas data frame and you're ready to do all sorts of work with that data (like cleaning question marks out of the data, getting summary statistics, finding correlations, visualizing data, and modeling data).  Importantly, you can re-run the cells in this notebook at any time to get the latest version of the data from REDCap!  
 
-## R and the REDCap API
+R
+---
 
 REDCap assumes you're going to use an R script and not an R Markdown document, but we advocate using R Markdown for just about everything you do in R, so we're going to teach that approach.
 
@@ -468,13 +472,13 @@ Although this is okay if that script is saved in a secure way on your computer a
 We'll walk through two strategies, one in Python and one in R.
 Feel free to just read the one in the coding language you prefer.
 
-### Protecting your API token in Python
+### Protecting your API token
 
-To protect your API token, never save it in your Python script or Jupyter notebook with the rest of your code.
-Instead, we can use [environment variables](https://developer.vonage.com/en/blog/python-environment-variables-a-primer) to save the API key separately so it's available on your computer but never saved in your Python code.
+To protect your API token, never save it in your script or notebook with the rest of your code.
+Instead, we can use [environment variables](https://developer.vonage.com/en/blog/python-environment-variables-a-primer) to save the API key separately so it's available on your computer but never saved in your code.
 
-There are lots of environment variables set for you automatically by your operating system (the [PATH variable](https://en.wikipedia.org/wiki/PATH_(variable) is one you may have encountered before --- if not, no worries).
-You can add any new environment variables you want to and make them available to you in Python by creating a `.env` file.
+There are lots of environment variables set for you automatically by your operating system (the [PATH variable](https://en.wikipedia.org/wiki/PATH_(variable) is one you may have encountered before).
+You can add any new environment variables you want to and make them available to you in Python by creating a `.env` file or in R by editing the `.Renviron` file.
 
 <div class = "cool-fact">
 <b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
@@ -486,8 +490,10 @@ By convention, environment variables are usually written in all caps, but you ca
 
 </div>
 
-Create the .env file
+Python
 ---
+
+**Create the .env file**
 
 The `.env` file is just a text file, so you can create it in a text editor like Visual Code Studio or Notepad.
 Just be sure to save it as `.env`, and it should be saved in the same folder as your Python script or Jupyter notebook.
@@ -499,7 +505,7 @@ Just be sure to save it as `.env`, and it should be saved in the same folder as 
 
 No, Word and other similar programs are called "word processors", and they include formatting in addition to the text itself.
 A text editor is for creating files that are much simpler in structure.
-For a review (and information about downloading Visual Studio Code, if you don't have it already) see the [discussion of text editors in our Bash 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#text-editors).
+For a review (and information about downloading Visual Studio Code, if you don't have it already) see the [discussion of text editors in this Bash 101 module](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/bash_command_line_101/bash_command_line_101.md#text-editors).
 
 </div>
 
@@ -542,8 +548,7 @@ Here's [a tutorial on creating and editing a .gitignore file](https://liascript.
 
 </div>
 
-Reference the environment variable in your Python code
----
+**Reference the environment variable in your Python code**
 
 There's a handy Python package for working with `.env` files called `dotenv`.
 We'll use `load_dotenv()`, which looks for a file called `.env` in the current working directory and loads all of the variables in it as environment variables (which means they're available in your OS but not yet within your Python session).
@@ -613,26 +618,10 @@ Now you can version control and share your code freely without worrying about ac
 
 Even better, if everyone on your team uses the same strategy for storing API tokens, they'll be able to run your code on their computer without having to edit anything as long as they have their own API token saved in their `.env` file and named the same way you name yours.
 
-### Protecting your API token in R
-
-To protect your API token, never save it in your R script or R Markdown file with the rest of your code.
-Instead, we can use [environment variables](https://stat.ethz.ch/R-manual/R-devel/library/base/html/EnvVar.html) to save the API key separately so it's available on your computer but never saved in your R code.
-
-There are lots of environment variables set for you automatically by your operating system (the [PATH variable](https://en.wikipedia.org/wiki/PATH_(variable) is one you may have encountered before --- if not, no worries).
-You can add any new environment variables you want to and make them available to you in R by editing the `.Renviron` file.
-
-<div class = "cool-fact">
-<b style="color: rgb(var(--color-highlight));">Did you know?</b><br>
-
-Environment variables are case sensitive on Unix-like systems (e.g. Mac or Linux computers), but not on Windows systems.
-So `redcap_api_token` and `REDCAP_API_TOKEN` could be two different environment variables on a Unix computer, but they would refer to the same thing on a Windows computer!
-
-By convention, environment variables are usually written in all caps, but you can choose to use lower case if you prefer.
-
-</div>
-
-Edit the .Renviron file
+R
 ---
+
+**Edit the .Renviron file**
 
 To open up the `.Renviron` file for editing, run the following R code in the [R Studio console](https://swcarpentry.github.io/r-novice-inflammation/09-supp-intro-rstudio.html#:~:text=The%20console%20window%20(in%20RStudio,when%20you%20close%20the%20session.):
 
@@ -681,7 +670,7 @@ For example, if you saved your API token as `REDCAP_API_PID_12345` above, then y
 
 Let's take a look at how that would work in an API call to REDCap.
 
-Here's something like the code you should have generated in the [R example above](#r-and-the-redcap-api), but we've deleted the line at the top that included the API token.
+Here's something like the code you should have generated in the [R example earlier in the module](#redcap-api-in-python-and-r), but we've deleted the line at the top that included the API token.
 Instead, where it used to just call for `token` in the `formData` list, now it references the environment variable we set, `Sys.getenv("REDCAP_API_PID_12345")` (note that your environment variable will probably have a slightly different name, since it will reference your own REDCap project ID number or project name).
 
 ```r
@@ -721,8 +710,6 @@ If your API call isn't working now and it was before, double check the following
 Now you can version control and share your code freely without worrying about accidentally sharing your API token!
 
 Even better, if everyone on your team uses the same strategy for storing API tokens, they'll be able to run your code on their computer without having to edit anything as long as they have their own API token saved in their `.Renviron` file and named the same way you name yours.
-
-
 
 ## Additional Resources
 
